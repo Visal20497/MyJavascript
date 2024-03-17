@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>THIS keyword</h1>
+    <script>
+        //console.log(this);  // window 
+        // OBJECT
+        // let obj ={
+        //     name : 'Ankit',
+        //     obj2 :{
+        //         name:'Aks',
+        //         print:function(){
+        //             console.log(this);
+        //         }
+        //     }
+        // }
+        // obj.obj2.print()  // here this refer to the current object or the parent object
+        // console.log(obj);
+
+        //FUNCTION
+
+        //function declaration
+        // function demo(){
+        //     console.log(this);
+        // }
+        // demo()
+        //In function declaration and function expression THIS keyword refer to window(global object)
+        //function expression
+        // let demo = function(){
+        //     console.log(this);
+        // }
+        // demo()
+
+        //arrow function
+        // let demo = ()=>{
+        //     console.log(this);  // here in arrow function their parent object is window 
+        // }
+        // demo()
+
+        // let obj = {
+        //     name:'Ankit',
+        //     print:function(){
+        //         let demo = ()=>{
+        //             console.log(this);  // this refer to obj
+        //         }
+        //         demo()
+        //     }
+        // }
+        // obj.print()
+
+        // let obj = {
+        //     name: 'ankit',
+        //     age: 22,
+        //     data: {
+        //         gender: 'male',
+        //         isActive: true,
+        //         print: function(){
+        //             let demo =()=>{
+        //                 console.log(this);
+        //             }
+        //             demo()
+        //         }
+        //     }
+        // }
+        // obj.data.print()
+
+        //THIS KEYWORD IN 'use strict' MODE
+        'use strict'
+    </script>
+</body>
+
+</html>

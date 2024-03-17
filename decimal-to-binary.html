@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>decimal-to-binary</title>
+</head>
+
+<body>
+    <!-- <script>
+        let integerNumber = 12
+        let arr =[]
+        while (integerNumber>0){
+            let remainder = integerNumber % 2
+            arr.push(remainder)
+            integerNumber = Math.trunc(integerNumber/2)
+        }
+        console.log(arr.reverse().join(''));
+    </script> -->
+
+    <div class="container">
+        <input id="number"  type="number">
+    </div>
+    <div class="box">
+        <button id="btn" onclick="binary()" >Binary</button>
+    </div>
+    <div id="result"></div>
+
+    <script>
+        function dec2bin(dec) {
+            return (dec >>> 0).toString(2);
+        }
+        function binary(){
+            const intNumber = document.getElementById('number').value
+            if(number){
+                document.getElementById('result').innerText=dec2bin(Number(intNumber))
+            }
+
+        }
+    </script>
+
+</body>
+
+</html>

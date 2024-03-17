@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+               //Perfect Number 
+        // function perfectNumber(num){
+        //     let sum =0
+        //     for(let i=1; i<num; i++){
+        //         if(num%i==0){
+        //             sum+=i
+        //         }
+        //     }
+        //     if(sum === num){
+        //         console.log('Perfect Number');
+        //     }else{
+        //         console.log('Not a Perfect Number');
+        //     }
+        // }
+        // perfectNumber(6)
+        // perfectNumber(54)
+        // perfectNumber(28)
+        // perfectNumber(108)
+
+                         //Perfect number in given Range
+        // let start = Number(prompt('Enter the starting number:'))
+        // let end = Number(prompt('Enter the ending number:'))
+        // for (let x = start; x<=end; x++) 
+        // {
+        //     perfectNumber(x)
+        // }
+        // function perfectNumber(num){
+        //     let sum =0
+        //     for(let i=1; i<num; i++){
+        //         if(num%i==0){
+        //             sum+=i
+        //         }
+        //     }
+        //     if(sum === num){
+        //         console.log(num);
+        //     }
+        // }
+
+                        // sum of the even and odd number in a given number
+        // let num = 8637229043
+        // let even_num=0
+        // let odd_num=0
+        // while (num){
+        //     let rem = num%10
+        //     if (rem%2==0){
+        //         even_num+=rem
+        //     }else
+        //     {
+        //         odd_num+=rem
+        //     }
+        //     num = Math.trunc(num/10)
+        // }
+        // console.log(even_num,odd_num);
+
+
+                      // Find the number is Prime or Not Prime
+        // let currentNumber = Number(prompt('Enter the number:'))
+        // function isPrime(num){
+        //     if(num<=1) return false;
+        //     for(let i=2; i<num; i++){
+        //         if(num%i==0){
+        //             return false;
+        //         }
+        //     }
+        //     return true
+        // }
+
+
+
+
+                     //Find the next Prime number
+        // function nextPrime(currentNumber){
+        //     let next = currentNumber+1;
+        //     while(!isPrime(next)){
+        //         next++
+        //     }
+        //     return next;
+        // }
+        // let nextPrimeNumber = nextPrime(currentNumber)
+        // console.log(`The next Prime Number after ${currentNumber} is ${nextPrimeNumber}`);
+
+
+                     //  Armstrong Number
+        // let num = Number(prompt("Enter the Number"))
+        // let temp = num
+        // let result = 0
+        // let count = 0
+        // while(temp>0){
+        //     count++
+        //     temp= Math.trunc(temp/10)
+        // }
+        // temp = num
+        // while (temp > 0){
+        //     let rem = temp%10
+        //     result += rem**count;
+        //     temp= Math.trunc(temp/10)
+        // }
+        // result == num ? console.log('Armstrong Number'):console.log('Not a Armstrong Number')
+
+
+
+                   //Find the  Armstrong number in given range
+        // let range1 = Number(prompt("Enter the First Range:"))
+        // let range2 = Number(prompt("Enter the Last Range:"))
+        // for(let num = range1 ; )
+        // let num = Number(prompt("Enter the Number"))
+        // let temp = num
+        // let result = 0
+        // let count = 0
+        // while(temp>0){
+        //     count++
+        //     temp= Math.trunc(temp/10)
+        // }
+        // temp = num
+        // while (temp > 0){
+        //     let rem = temp%10
+        //     result += rem**count;
+        //     temp= Math.trunc(temp/10)
+        // }
+        // result == num ? console.log('Armstrong Number'):console.log('Not a Armstrong Number')
+
+        
+
+
+
+                        //alternative in Range
+        // let start = Number(prompt('Enter the starting number:'))
+        // let end = Number(prompt('Enter the ending number:'))
+        // let loopCount = 0
+        // for (let i = start; i <= end; i++) 
+        // {
+        //     armStrong(i)
+        // }
+        //     function armStrong(num) {
+        //         let temp = num
+        //         let count = 0
+        //         let sum = 0
+        //         while (temp > 0) {
+        //             count++
+        //             temp = Math.trunc(temp / 10)
+        //         }
+        //         temp = num
+        //         while (temp > 0) {
+        //             let rem = temp % 10
+        //             sum += rem ** count
+        //             temp = Math.trunc(temp / 10)
+        //         }
+        //         if (sum === num) {
+        //             loopCount++
+        //             if(loopCount%2 != 1){
+        //                 console.log(num);
+        //             }
+        //         }
+        //     }    
+
+           
+        
+
+                       //smallest armstrong number in range
+        // let start = Number(prompt('Enter the starting number:'))
+        // let end = Number(prompt('Enter the ending number:'))
+        // let loopCount = 0
+        // for (let i = start; i <= end; i++) 
+        // {
+        //     armStrong(i)
+        // }
+        //     function armStrong(num) {
+        //         let temp = num
+        //         let count = 0
+        //         let sum = 0
+        //         while (temp > 0) {
+        //             count++
+        //             temp = Math.trunc(temp / 10)
+        //         }
+        //         temp = num
+        //         while (temp > 0) {
+        //             let rem = temp % 10
+        //             sum += rem ** count
+        //             temp = Math.trunc(temp / 10)
+        //         }
+        //         if (sum === num) {
+        //             loopCount++
+        //             if(loopCount === 1){
+        //                 console.log(num);
+        //             }
+        //         }
+        //     }    
+
+
+
+
+
+                      //Largest armstrong number in range
+        let start = Number(prompt('Enter the starting number:'))
+        let end = Number(prompt('Enter the ending number:'))
+        let loopCount = 0
+        for (let i = end; i >= start; i--) 
+        {
+            armStrong(i)
+        }
+            function armStrong(num) {
+                let temp = num
+                let count = 0
+                let sum = 0
+                while (temp > 0) {
+                    count++
+                    temp = Math.trunc(temp / 10)
+                }
+                temp = num
+                while (temp > 0) {
+                    let rem = temp % 10
+                    sum += rem ** count
+                    temp = Math.trunc(temp / 10)
+                }
+                if (sum === num) {
+                    loopCount++
+                    if(loopCount == 1){
+                        console.log(num);
+                    }
+                }
+            }     
+
+
+                    //Reverse the number
+        // let num = 12345;
+        // let store =0
+        // while (num>0){
+        //     let rem = num%10
+        //     store = store*10 + rem
+        //     num = Math.trunc(num/10)
+        // }
+
+
+
+                    //Pallindrome number
+        // let num = Number(prompt('Enter the number:'));
+        // let temp = num
+        // let store =0
+        // while (num>0){
+        //     let rem = num%10
+        //     store = store*10 + rem
+        //     num = Math.trunc(num/10)
+        // }
+        // store == temp? console.log('Palindrome Number'):console.log('Not a Palindrome Number');
+
+
+
+                     //factors of a number
+        // let num = 6 
+        // for(let i=1; i<=num; i++){
+        //     if(num%i==0){
+        //         console.log(`${i}`);
+        //     }
+        // }
+
+
+
+
+                           //factorial
+        // let factorial = (num)=>{
+        //     let fact = 1
+        //     for(let i =1 ; i<=num ; i++){
+        //         fact*=i;
+        //     }
+        //     console.log(fact); 
+        // }
+        // let x = factorial((prompt ('Enter a number')))
+      
+
+
+                         // fibancci series
+        // let a = 0
+        // let b = 1 
+        // for(let i=1; i<=10 ; i++){
+        //     console.log(a);
+        //     let c = a+b;
+        //     a = b;
+        //     b = c;
+        // }
+        
+
+
+                       // prime number using function
+        // function num(a){
+        //     let isprime = true
+        //     for(let i=2; i<a; i++){
+        //         if (a%i==0){
+        //             isprime=false
+        //             break;
+        //         }
+        //     }
+        //     isprime?console.log('prime number'):console.log('Not a prime number');;
+        // }
+        // num(5)
+
+
+
+                            //strong number
+        // let num = 143
+        // let temp = num 
+        // let store = 0
+        // while (temp>0){
+        //     let fact = 1
+        //     let rem = temp%10
+        //     for(let i=1; i<=rem; i++){
+        //         fact*=i
+        //     }
+        //     store+=fact
+        //     temp=Math.trunc(temp/10)
+        // }
+        // store==num?console.log('Strong no'):console.log('not a strong no');
+
+
+
+
+
+                             //Automorfic number
+        // let num = 25;
+        // let square = (num*num);
+        // square%100 == num?console.log('Automorphic Number'):console.log('Not a Automorfic Number');
+        // user input
+        // let num = Number(prompt('Enter the number:'))
+        // let temp = num
+        // let square = num*num
+        // let mod = 1
+        // while(temp>0){
+        //     mod*=10
+        //     temp = Math.trunc(temp/10)
+        // }
+        // square%mod==num?console.log('Automorphic Number'):console.log("Not a Automorphic number");
+
+
+
+
+
+                                //Neon number
+        // let num = Number(prompt('Enter the Number:'))
+        // let square = num*num
+        // let sum =0
+        // while(square>0){
+        //     let rem = square%10
+        //     sum+=rem
+        //     square = Math.trunc(square/10)
+        // }
+        // num == sum ? console.log('Neon Number'): console.log('Not a Neon Number')
+
+
+
+
+
+
+                                  //perfect Number
+        // let num = Number(prompt("Enter the Number:"))
+        // let store = 0
+        // for(let i=1; i<num; i++){
+        //     if(num%i==0){
+        //         store+=i
+        //     }
+        // }
+        // num==store?console.log('Perfect Number'):console.log('Not a perfect number')
+
+
+
+
+
+
+                                    //Happy number
+        // let num = 13
+        // let temp =num
+        // while(num>9){
+        //     let sum=0
+        //     while(num>0){
+        //         let rem = num%10
+        //         sum+= rem*rem
+        //         num = Math.trunc(num/10)
+        //     }
+        //     num = sum
+        // }
+        // num == 1? console.log('Happy Number'):console.log('Not a Happy Number');
+
+        //ranges
+        
+        // let start = Number(prompt("1"))
+        // let end = Number(prompt("2"))
+        // for(let i=start; i<=end; i++){
+
+        // }
+
+
+
+
+        function HpyNum(num)
+        {
+            let temp =num
+            while(temp>9){
+            let sum=0
+            while(temp>0){
+                let rem = temp%10
+                sum+= rem*rem
+                temp = Math.trunc(temp/10)
+            }
+            temp = sum
+        }
+            if(temp == 1){
+                console.log(`${num}`);
+            }
+        }
+
+
+        
+                          //special number  // 59 means (5+9)+(5*9)
+        //0 1 1 2 4 7 13 24 37
+        //swap no
+        //smallest digit in a given number
+        //greatest digit in a given number
+        //xylem number 1234  ---  1+4 == 2+3
+        //pholem number
+
+
+
+
+                        //special number  // 59 means (5+9)+(5*9)
+        // let start = Number(prompt('Enter the starting number:'))
+        // let end = Number(prompt('Enter the ending number:'))
+        // for (let x = start; x<=end; x++) 
+        // {
+        //     specialNumber(x)
+        // }
+        // function specialNumber(num){
+        //     let temp = num
+        //     let store =0
+        //     let sum =0 
+        //     let mul =1
+        //     while(temp>0){
+        //         let rem = temp%10
+        //         sum+=rem
+        //         mul*=rem
+        //         temp= Math.trunc(temp/10)
+        //     }
+
+        //     if((store+=(sum+mul))===num){
+        //         console.log(num);
+        //     }
+        // }
+
+
+
+
+                             // Series    0 1 1 2 4 7 13 24 37
+        // let a = 0
+        // let b = 1 
+        // let c = 1
+        // for(let i=1; i<=10 ; i++){
+        //     console.log(a);
+        //     let d = a+b+c;
+        //     a = b;
+        //     b = c;
+        //     c = d;
+        // }
+
+                         //swap no without using third variable
+        // let a = 1
+        // let b = 2
+        // a =a+b;
+        // b=a-b
+        // a=a-b
+        // console.log(a);
+        // console.log(b);
+
+                         //smallest digit in a given number
+        // let num = 125345
+        // while(num>0){
+        //     let rem = num%10
+
+        // }
+
+        //greatest digit in a given number
+        //xylem number 1234  ---  1+4 == 2+3
+        //pholem number
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

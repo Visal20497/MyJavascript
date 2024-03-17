@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function perfectNumber(num){
+        //     let sum =0
+        //     for(let i=1; i<num; i++){
+        //         if(num%i==0){
+        //             sum+=i
+        //         }
+        //     }
+        //     if(sum === num){
+        //         console.log('Perfect Number');
+        //     }else{
+        //         console.log('Not a Perfect Number');
+        //     }
+        // }
+        // perfectNumber(6)
+        // perfectNumber(54)
+        // perfectNumber(28)
+        // perfectNumber(108)
+
+        //inRange
+        let start = Number(prompt('Enter the starting number:'))
+        let end = Number(prompt('Enter the ending number:'))
+        for (let x = start; x<=end; x++) 
+        {
+            perfectNumber(x)
+        }
+        function perfectNumber(num){
+            let sum =0
+            for(let i=1; i<num; i++){
+                if(num%i==0){
+                    sum+=i
+                }
+            }
+            if(sum === num){
+                console.log(num);
+            }
+        }
+    </script>
+</body>
+</html>

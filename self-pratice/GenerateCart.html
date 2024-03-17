@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        padding: 0px;
+        margin: 0px;
+        box-sizing: border-box;
+    }
+    #output{
+        display: flex;
+        flex-direction: row;
+    }
+</style>
+<body>
+    <div class="container">
+        <button onclick="addItem()">Generate</button>
+        <div id="box">
+            <div id="output"></div>
+        </div>
+    </div>
+
+    <script>
+        const gloArr = [
+            {
+                id: 1,
+                productName: "Mercedes",
+                img: "https://images.pexels.com/photos/112460/pexels-photo-112460.jpeg?auto=compress&cs=tinysrgb&w=600",
+                price: "2.5cr",
+            },
+            {
+                id: 2,
+                productName: "OD",
+                img: "https://images.pexels.com/photos/244206/pexels-photo-244206.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                price: "1.4cr",
+            },
+            {
+                id: 3,
+                productName: "JeeP",
+                img: "https://images.pexels.com/photos/119435/pexels-photo-119435.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                price: "50L",
+            },
+            {
+                id: 4,
+                productName: "Jaguar",
+                img: "https://images.pexels.com/photos/544542/pexels-photo-544542.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                price: "2.8cr",
+            },
+            {
+                id: 5,
+                productName: "BMW",
+                img: "https://images.pexels.com/photos/100653/pexels-photo-100653.jpeg?auto=compress&cs=tinysrgb&w=600",
+                price: "4.2cr",
+            }
+        ]
+        let output = document.getElementById('output')
+
+        function addItem(){
+            let itemList = gloArr.map((data)=>{
+                    output.innerHTML+=`<h1>${data.id}</h1>
+                    <h2>${data.productName}</h2>
+                    <img src='${data.img}' height="200"
+                        width="200">
+                    <p>${data.price}</p>`
+                })
+        }
+    </script>
+</body>
+
+</html>

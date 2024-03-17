@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            display: inline-block;
+            margin: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <textarea  id="area" cols="30" rows="10"></textarea>
+        </div>
+        <div class="box">
+            <div class="colorBox" style="background-color: red; color: white;" onclick="colorList('red')">red</div>
+            <div class="colorBox" style="background-color: green; color: white;" onclick="colorList('green')">green</div>
+            <div class="colorBox" style="background-color: yellow; color: white;" onclick="colorList('yellow')">yellow</div>
+            <div class="colorBox" style="background-color: blue; color: white;" onclick="colorList('blue')">blue</div>
+            <div class="colorBox" style="background-color: mediumseagreen; color: white;" onclick="colorList('mediumseagreen')">mediumseagreen
+            </div>
+            <div class="colorBox" style="background-color: skyblue; color: white;" onclick="colorList('skyblue')">skyblue</div>
+            <div class="colorBox" style="background-color: pink; color: white;" onclick="colorList('pink')">pink</div>
+            <div class="colorBox" style="background-color: olive; color: white;" onclick="colorList('olive')">olive</div>
+            <div class="colorBox" style="background-color: saddlebrown; color: white;" onclick="colorList('saddlebrown')">saddlebrown</div>
+            <div class="colorBox" style="background-color: seagreen; color: white;" onclick="colorList('seagreen')">seagreen</div>
+        </div>
+    </div>
+
+    <script>
+        function colorList(color){
+            document.getElementById("area").style.backgroundColor=color
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <input id="text" type="text" placeholder="Enter Your Name">
+            <br>
+            <input id="pass" type="password" placeholder="Set Your Password">
+            <br>
+            <input id="email" type="email" placeholder="Email Id">
+            <br>
+            <button id="btn">Submit</button>
+        </div>
+
+        <h1>Details</h1>
+        <div class="details">
+        </div>
+    </div>
+
+    <script>
+        let Text = document.getElementById('text')
+        let Password = document.getElementById('pass')
+        let Email = document.getElementById('email')
+        let details = document.querySelector('.details')
+
+        let Submit = document.getElementById('btn').addEventListener("click", () => {
+            if (!Text.value || !Password.value || !Email.value) {
+                details.innerHTML = `<h3>Fill The All Details</h3>`
+            } else {
+                details.innerHTML = `<pre>Your Name is :${Text.value}
+Your Password:${Password.value}
+Your Email   :${Email.value}</pre>`
+            }
+                Text.value=''
+                Password.value=''
+                Email.value=''
+        })
+    </script>
+</body>
+
+</html>

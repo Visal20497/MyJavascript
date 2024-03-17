@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          // //Recursion
+        // function print(i,count){
+        //     console.log(i);
+        //     if(count > 10)return 
+        //         print(i,count+1);
+        // }
+        // print('ankit',1)
+       
+        // function print(i){
+        //     console.log(i);
+        //     if(i >=3)return 
+        //         print(i+1);
+        //         console.log(i);
+        // }
+        // print(1)
+        
+        // function m1(i){
+        //     console.log(i);
+        //     if(i>3) return;
+        //     m1(i+1)
+        //     console.log('hello');
+        // }
+        // m1(1)
+
+        //sum of the digits using recursion
+        // function sum(n)
+        // {
+        //     if(n == 0) return 0;
+            
+        //     return (n%10)+sum(~~(n/10))
+        // }
+        // console.log(sum(12345));
+
+        // let arr = [2,4,2,1,4,3];
+        // let filterArr = []
+        // for(x of arr){
+        //     for(let i=0; i<arr.length; i++){
+        //         if(x == arr[i]){
+        //             filterArr.push(x)
+        //         }
+        //     }
+        // }
+        // console.log(filterArr);
+
+        //write a program missing number in an array
+        // let a = [1,5,8]   // array always be in asending order
+        // for(let i=0; i<a.length; i++){
+        //     let k = a[i];
+        //     while(++k < a[i+1])
+        //     {
+        //         console.log(k);
+        //     }
+        //     k++;
+        // }
+
+        // let a =[1,2,1]    o/p = [1,2,1,1,2,1]
+        // let b = []
+        // for(let i=0; i<a.length*2; i++){
+        //     if(i<a.length)
+        //     {
+        //         b[i]=a[i];
+        //     }
+        //     else
+        //     {
+        //         b[i]=a[i-a.length]
+        //     }
+        // }
+        // console.log(b);
+
+        //sum of two arrays
+        // let a =[1,2,3]
+        // let b =[1,2,]
+        // let c = []
+        // let max;
+        // if(a.length > b.length){
+        //     max = a.length
+        // }
+        // else if(b.length > a.length){
+        //     max = b.length
+        // }
+        // else{
+        //     max = a.length
+        // }
+        
+        // for(let i =0; i<max; i++){
+        //     if(!a[i]){
+        //         a[i] = 0
+        //     }
+        //     if(!b[i]){
+        //         b[i] =0
+        //     }
+        //     let x = a[i]+b[i]
+        //     c.push(x)
+        // }
+        // console.log(c);
+    //or
+        // let a = [1,2,3,4,5]
+        // let b = [1,2,3]
+        // let c =[]
+        // let k =0
+        // let i = 0, j = 0;
+        // for(;i<a.length && j<b.length; i++ , j++){
+        //     c[k] = a[i]+b[j];
+        //     k++
+        // }
+        // while (i<a.length){
+        //     c[k] = a [i]
+        //     i++
+        //     k++
+        // }
+        // while (j<b.length){
+        //     c[k]=b[j]
+        //     j++
+        //     k++
+        // }
+        // console.log(c);
+
+        //occurance of each element
+        
+        // let a = [1,2,3,4,5,5,2,1,1,3]
+        // for(let i=0; i<a.length; i++)
+        // {
+        //     let count = 1
+        //     for(let j=i+1; j<a.length; j++)
+        //     {
+        //         if(a[i]==a[j])
+        //         {
+        //             count++
+        //             a[j]=" "
+        //         }
+        //     }
+        //     if(a[i]!=' ')
+        //     {
+        //         console.log(`${a[i]} = ${count}`);
+        //     }
+        // }
+        
+        //wap 
+        //wap to find nearest number 
+        let a = [2,3,4,1,7,8]
+        let num = 5
+        let res = a.map((item)=>{
+            return  item - num;
+        })
+        console.log(res);
+        for(let i = 0; i<res.length; i++){
+            if(res[i]<0){
+                res[i] = (res[i])* -1
+            }
+        }
+        console.log(res);
+        let near = res.reduce((acc,ele) =>{
+            if(acc<ele){
+                return acc
+            }else{
+                return ele
+            }
+        },)
+        console.log(near);
+        for(let i=0;i<res.length;i++){
+            if(near == res[i]){
+                var b = i
+            }
+        }
+        console.log(a[b]);
+        
+
+    </script>
+</body>
+</html>

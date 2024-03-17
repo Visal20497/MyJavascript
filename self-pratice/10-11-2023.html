@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Nested loop</h1>
+    <script>
+        // 1.
+        // *****
+        // *****
+        // *****
+        // *****
+        // *****
+
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str+='*'
+        //     }
+        //     str +='\n'
+        // }
+        // console.log(str)
+
+        //2.
+        // 23456
+        // 34567
+        // 45678
+        // 56789
+        // 678910
+
+        // let str=''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str+=(row+col)
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        //3.
+        // *@*@
+        // *@*@
+        // *@*@
+        // *@*@
+        // let str=''
+        // for(let row=1; row<=4; row++){
+        //     for(let col=1; col<=4; col++){
+        //         col%2!=0 ? str+='*' : str+='@'
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        //4.
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         row>=col ? str+='*' : str+=' '
+        //     }
+        //     str +='\n'
+        // }
+        // console.log(str)
+
+        //5.
+        // 2
+        // 12
+        // 456
+        // 1234
+        // 678910
+
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=row; col++){
+        //         row%2!=0? str+=(row+col)+'': str+=col+''
+        //         }
+        //         str +='\n'
+        //     }
+        // console.log(str)
+
+        //6.
+        // aaaaa
+        // aaaa
+        // aaa
+        // aa
+        // a
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=5; col>=row; col--){
+        //         str+='a'
+        //     }
+        //     str +='\n'
+        // }
+        // console.log(str)
+
+        //7.
+        let str = ''
+        for (let row = 1; row <= 6; row++) {
+            for (let col = 6; col >= row; col--) {
+                if((row+col)%2 == 0 || row % 2 == 0){
+                    str+='b'
+                }else {
+                    str+='a'
+                }
+            }
+            str+='\n'
+        }
+        console.log(str);
+
+
+
+
+
+    </script>
+</body>
+
+</html>

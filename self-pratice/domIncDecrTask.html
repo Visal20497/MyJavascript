@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+        margin: 10rem;
+        padding: 10px;
+    }
+
+    .btn {
+        margin: 2em;
+        padding: 50px;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <button onclick="increment()" class="btn">+</button>
+            <span id="data">0</span>
+            <button onclick="decrement()" class="btn">-</button>
+        </div>
+    </div>
+
+    <script>
+        let count = 0
+        let data = document.querySelector('#data')
+        function increment() {
+            data.innerHTML = `${count++}`
+        }
+        function decrement() {
+            if (count === 0) {
+                data.innerHTML = 0 
+            } else {
+                data.innerHTML = `${count--}`
+            }
+        }
+    </script>
+</body>
+
+</html>

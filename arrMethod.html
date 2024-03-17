@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array method</title>
+</head>
+<body>
+    <h1>
+        Array method 
+    </h1>
+    <script>
+        // //push()  //adding n number of element at the end of the array 
+
+        // let arr=[1,2,3,4,5]
+        // arr.push(3,2)
+        // console.log(arr);
+        // arr.push('ankit','odisha',5)
+        // console.log(arr);   //change the original length of the array
+
+        // //unshift()  //same as pop but one difference is its add the element at the start of the array 
+
+        // let arr=[1,2,3,5]
+        // arr.unshift(4)
+        // console.log(arr);
+
+        // //pop()  ////deleting the element at the end of the array
+
+        // let arr=[1,2,3,4,5,6,7,8]
+        // arr.pop()
+        // arr.pop()
+        // console.log(arr);  //
+
+        // //shift()   ////deleting the element at the start of the array
+
+        // let arr=[1,2,3,4,5,6]
+        // arr.shift()
+        // arr.shift()
+        // arr.shift()
+        // console.log(arr);
+
+        // // toString()  //It change the array into string 
+
+        // let arr=[1,2,3,4,5]
+        // console.log(arr , typeof arr);
+        // let res = arr.toString()
+        // console.log(res, typeof res);
+        
+        // // join() 
+
+        // let arr=[1,2,3,4,5,6]  
+        // let res= arr.join("a")    //this method accept one argument which defines the separation of two element
+        // console.log(res,typeof res); //its return the *string value
+
+        // // concat()    //merging two or more arr to an single array
+
+        // let arr = [1,2,34,5,6]  
+        // let arr1 = ['a','b','c','d','e']
+        // let res = arr + arr1
+        // console.log(res, typeof res);
+        // let res1 = arr.concat(arr1,arr,arr1)
+        // console.log(res1, typeof res1);  //Returns a new array
+
+
+        // //flat()  //flat is used to flatted the nested array to a single array
+
+        // let arr=[1,2,3,[4,[5,[6,7]]]]
+        // let res = arr.flat(4)
+        // console.log(res, typeof res);
+
+        // //reverse()    //it used to reverse an array 
+
+        // let arr = [1,2,3,4,5]
+        // arr.reverse()
+        // console.log(arr, typeof arr); //it change the original array not creating a new array
+
+        // //slice(firstIndex , lastIndex) for passing +ve index argument  //slice method gives a new array which is the sub array of the original array
+        // let arr = [1,2,3,4,5,6,7,8]
+        // console.log(arr.slice(4));    //when u pass one parameter then it takes it as a first index value means its output will be slice or cut of array means it result will be start from that given index
+        // console.log(arr.slice(2,4));  //when u pass two argument its take first argument as a first index and second argument as a last index . means result will be given stating index to before the given lastIndex 
+        // console.log(arr);   //it has no effect on the original array
+
+        // //slice(firstIndex , lastIndex) for passing +ve index argument 
+        // let arr = [1,2,3,4,5,6,7,8]
+        // console.log(arr.slice(-2))   //only one parameter indicates the firstIndex value and for -ve value its starting point is from the lastIndex of an array
+        // console.log(arr.slice(-2,-4));
+        // console.log(arr.slice(-2,1));
+        // console.log(arr.slice(-5,5));
+
+        // //splice(startIndex,delete count,adding element(ele1,ele2,ele3-----eleN))
+        // we can achieve the CRUD operation by using this method we can apply(create,update,delete)
+        // let arr=[1,2,3,4,5,6,7,8,9]
+        // console.log(arr.splice(3,5));
+        // console.log(arr.splice(0,2));   
+        // // console.log(arr);   //its return type is new array with the deleted items
+        // // console.log(arr.splice(0,6,'a','b','c'));   
+        // // console.log(arr); 
+        // console.log(arr.splice(-8,4,0,0,0));
+        // console.log(arr);
+        
+
+        // //Has Own Property()   //its returns the boolean value,it check it have the property belongs to its object or not
+
+        // function iterateobj(){
+        //     let exampleObj={
+        //         name:'ankit',
+        //         age:21,
+        //         gender:'male'
+        //     };
+        //     for(let key in exampleObj){
+        //         if(exampleObj.hasOwnProperty(key)){
+        //             value = exampleObj[key];
+        //             console.log(key.value);
+        //         }
+        //     }
+        // }
+        // iterateobj()
+
+
+        // //sort()   //it is used to sort the element . it is modify the original array
+        // let arr=[1,2,4,40,1,402,2,1,45,111,49,110]
+        // console.log(arr.sort());   //it sort the element treated them a string as a data type
+
+        // let arr = ['aa','ba','bac','dr','ad']
+        // arr.sort()
+        // console.log(arr);
+        
+        //for numeric value array we are using this method as a higher order function which accepts one callback value with two parameters
+        //return type depends on the parameter subtraction sequence 
+        //ascending order
+        // let res = arr.sort((a,b)=>{
+        //             return a-b
+        //     })
+        //     console.log(res,typeof res);
+        //dsending order
+        //let res = arr.sort((a,b)=>{
+        //         return b-a
+        // })
+        // console.log(res,typeof res);
+
+
+        // //includes(search Element , start Index)    //it check the data is their or not and returns the boolean value 
+        // let arr=['apple','mango','guava','orange','grapes']
+        // console.log(arr.includes('Apple'));
+        // console.log(arr.includes('apple')); //its returns the exact things means it ia a case sensitive
+        // let arr=[1,2,3,4,5,6]
+        // console.log(arr.includes(2,2)); // the second parameter is for index value is 2 is present in index 2 no so it is false
+        // console.log(arr.includes(5,4)); 
+
+
+        // //findIndex(funtion(currentValue,index,arr),thisValue)  // it is used to find the fast index which is satisfying our condition if not then it return -1
+        // function isOdd(ele,index,arr){
+        //     return(ele % 2 != 0)
+        // }
+        // console.log(([2,4,6,8]).findIndex(isOdd));
+        
+        // let arr = [12,54,65,87,90]
+        // function largerBetween(ele){
+        //     return ele>70;
+        // }
+        // console.log(arr.findIndex(largerBetween)); //once its satisfied it doesnot execute the method
+
+
+        // //findLastIndex(element)   // this method is used to finding the last occurence matching element ..
+        // let arr=[1,45,85,75]
+        // let arr1=['e',1,6,15.8]
+        // const num=(e)=>{
+        //     return e>16
+        // }
+        // console.log(arr.findLastIndex(num)); //it iterate the whole data and gives the result of last satisfied element.
+        // console.log(arr1.findLastIndex(num)); //  if no data is there then it retuen -1
+
+
+        // //find(element,index,array)  
+
+        // let arr = [1,2,3,4,5,6]
+        // let res = arr.find((ele,index,arr)=>{
+        //     return ele<7;
+        // })
+        // console.log(res);
+// let objArr=[
+//     {name:'ankit',age:21},
+//     {name:'jinka',age:22},
+//     {name:'vinod',age:23},
+//     {name:'anmol',age:25}
+// ]
+// let res = objArr.find(function(ele,index,arr){
+//     return ele.age>22;
+// })
+// console.log(res);
+// let res1 = objArr.find((e,i,arr)=>{
+//     return e.age === 22
+// })
+// console.log(res1);
+// let res2 = objArr.find((e,i,arr)=>{
+//     return 1
+// })
+// console.log(res2);
+// let res3 = objArr.find((e,i,arr)=>{
+//     return 0
+// })
+// console.log(res3);
+
+
+// //filter(element,index,arrayReference)
+
+// let res = objArr.filter(function(ele,index,arr){
+//     return ele.age > 18
+// })
+// console.log(res);
+
+// let res1 = objArr.filter(e => e.age>21)
+// console.log(res1);
+
+// //map(element,index,arrayReference)
+// let arr = [1,2,3,4,5,6]
+// let res = arr.map(e=> e*5)
+// console.log(res);
+// let res1 =arr.map(e=> e>3)
+// console.log(res1);
+// let res2 =arr.map((e)=>{
+//     if(e>3){
+//         return e
+//     }else{
+//         return ''
+//     }
+// })
+// console.log(res2);
+// let res3 = arr.map((e)=>{
+//     if(e>3){
+//         return e
+//     }
+// })
+// console.log(res3);
+
+
+        // let objArr =[{id:102,name:'ankit', age:22 , loc:'odisha' , gender:'male' },
+        //             {id:105,name:'vinod', age:25 , loc:'Bangalore' , gender:'male' },
+        //             {id:104,name:'tanmay', age:23 , loc:'Bihar' , gender:'male' },
+        //             {id:107,name:'rakhi', age:23 , loc:'odisha' , gender:'female' },
+        //             {id:101,name:'man', age:21 , loc:'andhra' , gender:'female' }]
+
+
+
+//1 write an array of every male student name
+        // const maleObj = objArr.filter((e)=> e.gender=='male')   
+        // //console.log(maleObj)
+        // const maleName = maleObj.map((e)=> e.name) 
+        // console.log(maleName);   
+
+//2 write an array of every female student name
+        // const femaleObj = objArr.filter ((e)=> e.gender=='female')
+        // //console.log(femaleObj);
+        // const nameObj = femaleObj.map ((e)=> e.name)
+        // console.log(nameObj);
+//achieve 2 question easy method
+        // const fObj = objArr.filter((e)=> e.gender==='female').map((e)=> e.name)
+        // console.log(fObj);
+
+//filter all the 22+ student
+        // const studentAbove22Plus = objArr.filter((e)=> e.age > 22)
+        // console.log(studentAbove18Plus);
+
+//filter the array according to id
+        // const arrayId = objArr.filter((e)=> e.id===106)
+        // console.log(arrayId);
+
+//sort the array according to id
+        // const arrySortAccToId = objArr.sort((a,b)=> a.id-b.id)
+        // console.log(arrySortAccToId);
+
+//find the male student who ages is less then 23 in a array
+        // const ageLessThan23 = objArr.filter((e)=> e.age <23 && e.gender==='male')
+        // console.log(ageLessThan23);
+
+//find the id 102 and update his age to 21
+        // const updateArray = objArr.find((e)=> e.id == 102)
+        // updateArray.age=21
+        // console.log(updateArray);
+
+//
+        // const nameArr = []
+        // for(let key in objArr){
+        //     nameArr.push(objArr[key].name)
+        // }
+        // console.log(nameArr);
+
+        // const nameAgeArr = []
+        // for(let key in objArr){
+        //     nameAgeArr.push(objArr[key].name,objArr[key].age)
+        // }
+        // console.log(nameAgeArr);
+        
+        // const nameAgeArr = []
+        // for(let key in objArr){ 
+        //     if(objArr[key].age>22){
+        //         nameAgeArr.push(objArr[key].name,objArr[key].age)
+        //     }
+            
+        // }
+        // console.log(nameAgeArr);
+
+        // const arr = []
+        // for(let key in objArr){ 
+        //     if(objArr[key].loc === 'odisha'){
+        //         arr.push(objArr[key])
+        //     }
+            
+        // }
+        // console.log(arr);
+        
+
+        // const arr = objArr.filter((e)=>{
+        //     return e.loc === 'odisha'
+        // })
+        
+        // console.log(arr);
+
+        // const arr = objArr.filter((e)=>{
+        //     return e.gender === 'female'
+        // })
+        // const arr1 = []
+        // for(let key in arr){
+        //     arr1.push(arr[key].name)
+        // }
+        // console.log(arr1);
+        
+        // const arr = objArr.filter((e)=>{
+        //     return e.gender === 'female'
+        // }).map((data)=>{
+        //     return data.name
+        // })
+        // console.log(arr)
+
+
+
+const character = [
+    {
+        name:'Ankit',
+        height:173,
+        mass:70,
+        eye_color:'black',
+        gender:'male'
+    },
+    {
+        name:'Anjali',
+        height:152,
+        mass:58,
+        eye_color:'brown',
+        gender:'female'
+    },
+    {
+        name:'Rajnish',
+        height:178,
+        mass:73,
+        eye_color:'grey',
+        gender:'male'
+    },
+    {
+        name:'Manish',
+        height:182,
+        mass:86,
+        eye_color:'black',
+        gender:'male'
+    }
+]
+
+// //get all the names of an array
+//     let names =[],i=0
+//     for(let key in character){
+//         names[i++]=character[key].name
+//     }
+//     console.log(names);
+//easy way
+//     const res = character.map ((character)=> character.name )
+//     console.log(res);
+
+//get an array of objects with just name and height properties
+    // let names =[],i=0
+    // for(let key in character){
+    //     const obj ={}
+    //         obj.name = character[key].name
+    //         obj.height = character[key].height
+    //         names[i++]=obj
+    // }
+    // console.log(names);
+//easy way
+    // const res = character.map((character)=>{
+    //     return{
+    //         name:character.name,
+    //         height:character.height
+    //     }
+    // })
+    // console.log(res);
+
+// //get the total height of a character
+    // let totalHeight = 0
+    // for(let key in character){
+    //     totalHeight+=character[key].height
+    // }
+    // console.log(`totalHeight :${totalHeight}`);
+// //using reduce method
+    // const res = character.reduce((acc,ele)=>{
+    //     return acc + ele.height
+    // },0)
+    // console.log(res);
+
+// //get character with mass greater than 80
+    // //a (for in)
+    // let array = [] , i =0
+    // for(let key in character){
+    //     if(character[key].mass>80){
+    //         array[i++]=character[key]
+    //     }
+    // }
+    // console.log(array)
+
+    // // //a (for of)
+    // let array1 = [], j =0 
+    // for(let ele of character){
+    //     if(ele.mass>80){
+    //         array1[j++]=ele
+    //     }
+    // }
+    // console.log(array1);
+
+    // //b
+    // let res = character.find((e)=>{
+    //     return e.mass>80
+    // })
+    // console.log(res);
+    // //c
+    // let res1 = character.filter((e)=>{
+    //     return e.mass>80
+    // })
+    // console.log(res1);
+
+// //get all male student
+    //a(for of) 
+    // let array = [], i=0
+    // for(let ele of character){
+    //     if(ele.gender == 'male'){
+    //         array[i++]=ele
+    //     }
+    // }  
+    // console.log(array); 
+    // //b(for in) 
+    // let array1 =[],j=0
+    // for(let key in character){
+    //     if(character[key].gender == 'male'){
+    //         array1[j++]=character[key]
+    //     }
+    // }
+    // console.log(array1);
+    // //c
+    // let res =character.filter(ele => ele.gender=='male')
+    // console.log(res);
+
+// //sort by gender
+    // const sortByGender = character.sort((char1,char2)=>{
+    //     if(char1.gender > char2.gender){
+    //         return -1
+    //     }
+    //     if(char1.gender < char2.gender){
+    //         return 1
+    //     }
+    // })
+    // console.log(sortByGender);
+// //sort by names
+    // const sortByNames = character.sort((char1,char2)=>{
+    //     if(char1.name > char2.name){
+    //         return 1
+    //     }
+    //     if(char1.name < char2.name){
+    //         return -1
+    //     }
+    // })
+    // console.log(sortByNames);
+
+    </script>
+</body>
+</html>

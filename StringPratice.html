@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>String Practice</h1>
+    <script>
+
+        // //1) Javascript Program to count the total number of characters in a string
+        // //Using length method
+        // let str = prompt("Enter any String Or Character:")
+        // let count =0
+        // for(let i=1; i<=str.length; i++){
+        //     if(str[i]!=' ')
+        //     count++
+        // }
+        // console.log(count);
+        // //without using length method
+        // let str = prompt("Enter any Name:")
+        // let count =0 ;
+        // let i =0
+        // while(str[i]!=' '){
+        //     count++
+        //     i++
+        // }
+        // console.log(count);
+
+        // // Reverse a string
+        // let str = 'ankit kumar shaw'
+        // let revStr = ''
+        // for(let i=str.length-1; i>=0; i--){
+        // revStr += str.charAt(i)     // revStr += str[i]
+        // }
+        // console.log(revStr);
+
+        // //****------Imp Things to Remember in string ------****
+        // let name = 'ankit'
+        // let res = name.charAt(3)
+        // console.log(res);
+        // let  re1 = name.substr(1,4)
+        // console.log(re1);
+        // let res2 = name.substr(1)
+        // console.log(res2);
+
+        // // Reverse number without using .length method 
+        // using function
+        // function revNum(str){
+        //     if(str === "")
+        //     {
+        //         return ""
+        //     }
+        //     else
+        //         return revNum(str.substring(1)+ str.charAt(0) );
+        // }
+        // let res = revNum('hello')
+        // console.log(res);
+
+        // //check the string is pallindrome or not
+        // let str = 'ankit'
+        // let revStr = ''
+        // for(let i=str.length; i>=0; i--){
+        //     revStr += str.charAt(i)
+        // }
+        // str === revStr ? console.log(`${str} is a pallindrome`) : console.log(`${str} is not a pallindrome`);
+
+        //Or
+
+        // //best way to check pallindrome
+
+        // function isPal(str){
+        //     let a = 0;
+        //     let b = str.length-1;
+
+        //     while(a<b){
+        //         if(str[a] != str[b])         // if(str.charAt(a) != str.charAt(b))
+        //         {
+        //             return console.log('no pallindrome');
+        //             a++;
+        //             b--;
+        //         }else
+        //         {
+        //             return console.log('pallindrome');
+        //         }
+        //     }
+        // }
+        // isPal('madam')
+
+        // //reverse a string 
+        // let str = 'ankit'
+        // let res = str.split('').reverse().join('')
+        // console.log(res);
+
+        //pallindrome
+        let str = 'madam'
+        let a = 0; 
+        let b = str.length-1
+        while(a<b){
+            if(str[a]=== str[b]){
+                a++
+                b--
+            }
+            else{
+                break;
+            }
+        }
+        
+        
+
+
+
+
+        
+
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array searching method</h1>
+    <script>
+
+        // //indexOf()
+        // let arr = [1,2,4,5,56,8,5,7]
+        // let res1 = arr.indexOf(5)
+        // let res = arr.indexOf(5,4)
+        // console.log(res);
+        // console.log(res1);
+
+        // //lastIndexOf()
+        // let arr = [1,2,3,4,5,6,7,8,5]
+        // let res;
+        // res=arr.lastIndexOf(5)
+        // res=arr.lastIndexOf(5,6)
+        // console.log(res);
+
+        //includes()
+         
+
+
+        // //find()
+        // let arr = [1,2,5,4,6,8,9]
+        // let res=arr.find((ele,index,arrRef)=>{
+        //     return ele%2==0
+        // })
+        // console.log(res);
+        
+        // let Details =[
+        //     {id:1,name:'ankit',origin:'Odisha'},
+        //     {id:2,name:'tanmay',origin:'bihar'},
+        //     {id:3,name:'sakti',origin:'uttarkhand'},
+        //     {id:4,name:'rakhi',origin:'Odisha'},
+        //     {id:5,name:'raju',origin:'dholakpur'}
+        // ]
+        // Details.find((data,index,oriArr)=>{
+        //     console.log(data , index , oriArr);
+        // })
+        // let res = Details.find((data,index,oriArr)=>{
+        //     return data.id>3
+        // })
+        // console.log(res);
+        
+
+        // some question of searching method
+        
+        // let arr = [1,2,true,false,null,5]
+        // let sum = 0
+        // // for(let i=0; i<arr.length; i++){
+        // //     sum += arr[i]
+        // // }
+        // for(let x of arr){
+        //     sum+=x
+        // }
+        // console.log(sum);
+
+        let arr = [
+            {id:1,name:'ankit',sal:2000,isActive:true},
+            {id:2,name:'tanmay',sal:4000,isActive:true},
+            {id:3,name:'jlm',sal:5500,isActive:true},
+            {id:4,name:'vinod',sal:3000,isActive:false},
+            {id:5,name:'rakhi',sal:2000,isActive:true},
+        ]
+
+        // let res=arr.filter((data)=>{
+        //     return data.isActive
+        // })
+        // console.log(res);
+
+
+        // let res=arr.filter((data)=>{
+        //     return data.name=='jlm' && data.sal == 5500
+        // })
+        // console.log(res);
+
+        // let count = 0
+        // let res=arr.filter((data)=>{
+        //     if(data.sal>3000){
+        //         count++
+        //     }
+        // })
+        // console.log(count);
+
+        let str =''
+        arr.filter((data)=>{
+            if(data.sal>3000){
+                str+=`Name is : ${data.name} , `
+            }
+        })
+        console.log(str);
+    </script>
+</body>
+</html>

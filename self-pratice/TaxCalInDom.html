@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <input id="input" type="number" placeholder="Enter Your Salary">
+            <button onclick="tax()">Check</button>
+        </div>
+        <div class="output">
+        </div>
+    </div>
+
+    <script>
+        let inputValue = document.getElementById('input')
+        let taxPay = document.querySelector('.output')
+
+        function tax() {
+            let Salary = inputValue.value
+
+            if (Salary == 0) {
+                return taxPay.innerHTML = `<h1>You have not fill any amount </h1>`
+            } else {
+                if (Salary <= 300000 && Salary>0) {
+                    inputValue.value = ''
+                    return taxPay.innerHTML = `<h1>You have no need to pay any tax , your tax is : ${Salary * .0}</h1>`
+                }
+                else if (Salary >300000 && Salary <= 600000) {
+                    inputValue.value = ''
+                    return taxPay.innerHTML = `<h1>You have to pay tax , your tax is : ${Salary * 0.05}</h1>`
+                }
+                else if (Salary > 600000 && Salary <= 900000) {
+                    inputValue.value = ''
+                    return taxPay.innerHTML = `<h1>You have to pay tax , your tax is : ${Salary * 0.10}</h1>`
+                }
+                else if (Salary > 900000 && Salary <= 1200000) {
+                    inputValue.value = ''
+                    return taxPay.innerHTML = `<h1>You have to pay tax , your tax is : ${Salary * 0.15}</h1>`
+                }
+                else if (Salary > 1200000 && Salary <= 1500000) {
+                    inputValue.value = ''
+                    return taxPay.innerHTML = `<h1>You have to pay tax , your tax is : ${Salary * 0.20}</h1>`
+                }
+                else if (Salary > 1500000) {
+                    inputValue.value = ''
+                    return taxPay.innerHTML = `<h1>You have to pay tax , your tax is : ${Salary * 0.30}</h1>`
+                }
+            }
+
+
+
+            // switch(Salary){
+            //     case (Salary<300000):
+            //         return taxPay.innerHTML= `<h1>You have no need to pay any tax , your tax is : ${Salary.value * .0}</h1>`
+            //     case (Salary>300000 || Salary<600000):
+            //         return taxPay.innerHTML= `<h1>You have to pay tax , your tax is : ${Salary * .05}</h1>`
+            //     case (Salary>600000 || Salary<900000):
+            //         return taxPay.innerHTML= `<h1>You have to pay tax , your tax is : ${Salary * .10}</h1>`
+            //     case (Salary>900000 || Salary<1200000):
+            //         return taxPay.innerHTML= `<h1>You have to pay tax , your tax is : ${Salary * .15}</h1>`
+            //     case (Salary>1200000 || Salary<1500000):
+            //         return taxPay.innerHTML= `<h1>You have to pay tax , your tax is : ${Salary * .20}</h1>`
+            //     case (Salary>1500000):
+            //         return taxPay.innerHTML= `<h1>You have to pay tax , your tax is : ${Salary * .30}</h1>`
+            //     default:
+            //         return taxPay.innerHTML= `<h1>You have not fill any amount </h1>`
+
+            // }
+        }
+    </script>
+</body>
+
+</html>

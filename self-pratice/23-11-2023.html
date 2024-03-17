@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+
+<body>
+    <h1>Crud operation in object </h1>
+    <script>
+        //creation of object using METHOD
+        //literals  way 
+
+        // let obj ={
+        //     name:'ankit',
+        //     add:'Od',
+        //     age:22,
+        //     details:function(){
+        //         console.log(`My name is ${this.name} and i am from ${this.add} and my age is ${this.age}`);
+        //     }
+        // }
+        // obj.details()
+
+        //instance way
+        // let stu = new Object()
+        // stu.name='ankit'
+        // stu.add='odisha'
+        // stu.details=function(){
+        //     console.log(this.name,this.add);
+        // }
+        // stu.details()
+
+        //constructor way 
+        // function stu(){
+        //     this.name='ankit'
+        //     this.age = 22
+        //     this.print=function(){
+        //         console.log(this.name,this.age);
+        //     }
+        //     }
+        //     let obj = new stu
+        //     obj.print()
+
+        // function print(name,add){
+        //     this.name=name
+        //     this.add=add
+        //     this.print=function(){
+        //         console.log(this.name,this.add);
+        //     }
+        // }
+        // let obj = new print('Ankit','odisha')
+        // obj.print()
+
+        //READ
+        // let obj = {
+        //     name: 'ankit',
+        //     add: 'odisha',
+        //     age: 22,
+        //     details: function () {
+        //         console.log(`My name is ${this.name} and age is ${this.age}`);
+        //     }
+        // }
+
+        // //2 ways to access
+
+        // //dot . notation 
+        // console.log(obj.name);
+        // console.log(obj.add);
+        // console.log(obj.age);
+        // obj.details() //we can access the method also
+
+        // //[] bracket notations
+        // console.log(obj['name']);
+        // console.log(obj['add']);
+        // console.log(obj['age']);
+
+        // let student ={ 
+        //     name:'ankit',
+        //     age:22 
+        // }
+        // let demo = prompt('Enter the key')
+        // console.log(student[demo]); //bracket notation is useful for both static type and dynamic type 
+        // console.log(student.demo);  //dot notation only useful for static type
+
+        // let msg =  prompt('enter the key:')
+        // let obj={
+        //     name:'ANkit'
+        // }
+        // console.log(obj['name']);
+    </script>
+
+</body>
+
+</html>

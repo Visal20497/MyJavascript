@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <select name="option" id="select">  
+        </select>
+        <button onclick="addButton()">Add</button>
+        
+        <div id="output"></div>
+    </div>
+
+
+    <script>
+        let output = document.getElementById('output')
+        const typeOfOptions = ['number','color','text','range','date','file','image','email','radio','checkbox']
+
+        let option = document.getElementById('select')
+        let store = typeOfOptions.map((data)=>{
+            return `<option value=${data}>${data}</option>`
+        })
+        option.innerHTML = store.join('\n');
+        function addButton(){
+            output.innerHTML+=`<div><input type="${option.value}"/></div>`
+        }
+    </script>
+</body>
+</html>

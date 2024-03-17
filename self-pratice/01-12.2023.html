@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>array method</h1>
+    <script>
+        //join()
+        // let arr =[1,2,3,4,5,6,7,8]
+        // let res = arr.join('ANkit')
+        // let res1 = arr.join(' ')
+        // console.log(arr); //original array
+        // console.log(res); //every element join with string Ankit
+        // console.log(res1); //show all array element removing of comma from it
+
+        //sort()
+        // let arr = ['a','A','B','d','e']
+        // let res = arr.sort((a,b)=>{   // ascending order
+        //     return a-b
+        // })
+        // console.log(res);
+        // let num = [0,10,20,1,2]
+        // let res = num.sort((a,b)=>{
+        //     return a-b
+        // })
+        // console.log(res);
+        
+
+        //reverse()
+        // let arr = [1,2,3,4,5,6]
+        // arr.reverse().reverse()
+        // console.log(arr);
+
+        //concat
+        // let arr = [1,2,3,4,5]
+        // let arr1 = [6,7,8,9,10]
+        // let sum = arr+arr1
+        // console.log(sum, typeof sum);
+        // let res = arr.concat(arr1,sum)
+        // console.log(res , typeof res);
+
+        // //flat()
+        // let arr = [1,2,3,[40,50,[600,700]]]
+        // let res = arr.flat(3)
+        // console.log(arr);
+        // console.log(res);
+
+        //for each()
+        // let arr = [1,2,3,4,5,6]
+        // let res = arr.forEach((data,i)=>{
+
+        //     console.log(res);
+        // })
+
+        //map()
+        // let arr=[4,5,6,7,1,8,9]
+        // let res = arr.map((data,i,currArr)=>{
+        //     console.log(data,i,currArr);
+        //     return data+2
+        // })
+        // console.log('OriginalArr',arr);
+        // console.log('newArr',res);
+
+        // let arr1 = [1,2,3,4,5]
+        // // let res = arr1.map((e)=>{
+        // //     return e>3
+        // // })
+        // // console.log(res);   //[false, false, false, true, true]
+        // let res = arr1.map((e)=>{
+        //     if(e>3)
+        //     return e
+        // })
+        // console.log(res);  //[undefined, undefined, undefined, 4, 5]
+
+        //reduce()
+        // let arr =[1,2,3,4,5,6]
+        // let res = arr.reduce((acc,data,i,oriArr)=>{
+        //     // console.log('hyy i am accumulator '+acc);
+        //     // console.log('Hyy am data '+data);
+        //     return acc+data
+        // },0)
+        // console.log(arr);
+        // console.log(res);
+
+        //reduceRight()
+        // let arr = [1,2,3,4,5,6,7,8,9]
+        // let res = arr.reduceRight((acc,ele)=>{
+        //     console.log(ele);
+        //     return acc-ele
+        //     // return ele-acc
+        // },0)
+        // console.log('result:'+res);
+
+        //fill()
+        // let arr = new Array(5).fill('Ankit',2,4)
+        // console.log(arr);
+        // let num =[1,2,3,4,5,6,7,8,9]
+        // let res =  num.fill('$$',3,6)
+        // console.log(res);
+
+        //some()
+        // let arr = [1,2,3,4,5,6,7,8]
+        // let res =  arr.some((item)=>{
+        //     console.log('item: '+item);
+        //     return item > 15
+        // })
+        // console.log(res);
+
+        //every()
+        //let arr = [2,4,6,8,10,16]
+        let arr = [2,4,6,8,11,16]
+        let res =  arr.every((item)=>{
+            console.log('item: '+item);
+            return item %2 ==0
+        })
+        console.log(res);
+
+    </script>
+</body>
+</html>

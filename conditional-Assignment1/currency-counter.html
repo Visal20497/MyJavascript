@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <h1>javascript</h1>
+    <script>
+        let num = 5250
+        let count =0
+        
+        if(num>=2000){
+            count = parseInt(num/2000)
+            console.log('2000 count:'+ count  )
+            num -= (count*2000) // num = num-(count*2000)
+            console.log('remaining amount: '+num)
+        }
+        if(num>=500){
+            count = parseInt(num/500)
+            console.log('500 count:'+count )
+            num -= (count*500)
+            console.log('remaining amount: '+num)
+        }
+        if(num>=100){
+            count = parseInt(num/100)
+            console.log('100 count:'+ count)
+            num -= (count*100)
+            console.log('remaining amount: '+num)
+        }
+        if(num>=50){
+            count = parseInt(num/50)
+            console.log('50 count:'+ count )
+            num -= (count*50)
+            console.log('remaining amount: '+num)
+        }
+        if(num>=20){
+            count = parseInt(num/20)
+            console.log('20 count:'+ count)
+            num -= (count*20)
+            console.log('remaining amount: '+num)
+        }
+        if(num>=10){
+            count = parseInt(num/10)
+            console.log('10 count:'+ count )
+            num -= (count*10)
+            console.log('remaining amount: '+num)
+        }
+        if(num>0 && num<10){
+            count = num
+            console.log('change:'+ count )
+            console.log('remaining amount: '+num)
+        }
+
+    </script>
+    <!-- <script>
+        const CURRENCY_DENOMINATION = [2000, 500, 200, 100, 50, 20, 10]
+        function getCurrencyChange(value) {
+            const result = {};
+            CURRENCY_DENOMINATION.forEach((eachDenomination) => {
+                const denominationCount = parseInt(value/eachDenomination);
+                if(denominationCount > 0) {
+                    result[eachDenomination] = denominationCount;
+                    value -= (denominationCount * eachDenomination);
+                }
+            });
+            if(value > 0) result.change = value;
+            return result;
+        }
+
+        const response = getCurrencyChange(+(prompt("Enter any positive number")));
+        console.log(response)
+    </script> -->
+</body>
+</html>

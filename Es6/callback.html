@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASynchronous</title>
+</head>
+<body>
+    <h1>callback</h1>
+    <script>
+        // //callback sychronous behaviour
+        // function print(name,cb){
+        //     console.log('Before callback');
+        //     cb(name);
+        //     console.log('After callback');
+        // }
+        // function sayMyName(name){
+        //     console.log('My name is:',name);
+        // }
+        // print('Ankit',sayMyName)
+        
+        // //callback with Asychronous behaviour
+        // let obj = [{name:'ankit'},{name:'manish'}]
+        // function enroll(student,cb){
+        //     console.log('Before Callback');
+        //     setTimeout(()=>{
+        //         console.log('Start Task');
+        //         obj.push(student)
+        //         console.log('Student Enroll:Done');
+        //         cb()
+        //         console.log('End Task');
+        //     },3000)
+        //     console.log('After Callback');
+        // }
+        // function getStudent (){
+        //     console.log('Inside getstudent start');
+        //     setTimeout(()=>{
+        //         console.log('All student is :',obj);
+        //     },1000)
+        //     console.log('Inside getstudent end');
+        // }
+        // let newstudent = {name:'Rajnish'}
+        // enroll(newstudent,getStudent)
+    </script>
+</body>
+</html>

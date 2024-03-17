@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- <div id="container">
+        <h1>Hello,This side Ankit Shaw</h1>
+    </div>
+    <script>
+        let store = document.getElementById('container')
+        // store.innerHTML=`<p>I Am learning</p>`
+        let para = document.createElement('p')
+        para.innerText=`I am learning JS`
+        store.appendChild(para)
+        let anchor = document.createElement('a')
+        anchor.innerText=`Anchor link`
+        anchor.setAttribute('href','https://www.codewithharry.com/tutorial/react-props/')
+        anchor.setAttribute('target','blank')
+        anchor.removeAttribute('target')
+        store.appendChild(anchor)
+        console.log(anchor);
+        let data = document.createElement('ul')
+        data.innerHTML=`<ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            </ul>`
+        store.appendChild(data)
+        let x = anchor.getAttribute('href')
+        let y = anchor.hasAttribute('target')
+        console.log(x,y);
+    </script> -->
+
+    <!-- Replace in Dom -->
+    <div id="cont1">
+        <h1 id="hed1">I am hed1</h1>
+        <h1 id="hed2">I am hed2</h1>
+    </div>
+    <div id="cont2">
+        <h1 id="hed3">I am hed3</h1>
+        <h1 id="hed4">I am hed4</h1>
+    </div>
+    
+    <script>
+        let cont1 = document.getElementById('cont1')
+        let hed3 = document.getElementById('hed3')
+        //replaceWith()
+        // cont1.replaceWith(hed3)
+
+        //replacechild()
+        // cont1.replaceChild(hed3,document.getElementById("hed1"))
+
+        //removechild()
+        // cont1.removeChild(document.getElementById('hed2'))
+        
+    </script>
+</body>
+</html>

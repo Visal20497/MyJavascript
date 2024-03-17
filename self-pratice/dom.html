@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>DOM(Document Object Model)</h1>
+
+    <h1 id="hed-1" class="hed-1">Hello</h1>
+    <div>
+        <p id="para-1" class="common">I am div1</p>
+        <p id="para-2" class="common">I am div2</p>
+        <p id="para-3" class="common">I am div3</p>
+    </div>
+    <script>
+        //HTML element selectors
+        //two type of selector :- 1) single selector 2) group selector
+
+        //Single selector :- 
+
+        //1)getElementById()  
+        // let hed = document.getElementById('hed-1')
+        // console.log(hed);
+
+        // 2)querySelector
+        // let res = document.querySelector('.hed-1')
+        // console.log(res);
+
+        //group selector
+
+        //byClassName
+        // let res = document.getElementsByClassName('common')
+        // console.log(res);
+
+        //querrySelectorAll
+        // let res = document.querySelectorAll('.common')  //byclass query 
+        // let res1 = document.querySelectorAll('p')  //bytag query
+        // let res2 = document.querySelectorAll('div>.common') //byhirechy query
+        // console.log(res);
+        // console.log(res1);
+        // console.log(res2);
+
+        //byTagName
+        // let res = document.getElementsByTagName('p')
+        // console.log(res);
+
+        //byName
+        //let res =document.getElementsByName()
+
+    </script>
+</body>
+</html>

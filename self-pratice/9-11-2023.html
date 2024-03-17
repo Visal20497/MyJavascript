@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using Function</title>
+</head>
+
+<body>
+    <script>
+        //Doing all the number coding using function
+
+        //perfect number 
+        // let result = 0
+        // function perfectNumber(num) {
+        //     for (let i = 1; i < num; i++) {
+        //         if (num % i == 0) {
+        //             result += i
+        //         }
+        //     }
+        //     result == num ? alert('Perfect Number') : alert('Not a Perfect Number')
+        // }
+        // perfectNumber(Number(prompt('enter the number')))
+
+        //armstrong number
+        // function armstrongNumber(num) {
+        //     let temp = num
+        //     let count = 0
+        //     while (temp > 0) {
+        //         count++
+        //         temp = Math.trunc(temp / 10)
+        //     }
+        //     temp = num
+        //     let res = 0
+        //     while (temp > 0) {
+        //         let singleNumber = temp % 10
+        //         res += Math.pow(singleNumber, count)
+        //         temp = Math.trunc(temp / 10)
+        //     }
+        //     res == num? alert('Armstrong number'):alert('Not a armstrong number')
+        // }
+        // armstrongNumber(Number(prompt('enter the number:')))
+
+        // factorial
+        // function factorial(num) {
+        //     if (num === 0 || num === 1)
+        //         return 1;
+        //     for (var i = num - 1; i >= 1; i--) {
+        //         num *= i;
+        //     }
+        //     return num;
+        // }
+        // let x =factorial(5)
+        // console.log(x);
+
+        //multiplication  table
+        function table(num){
+            let str=''
+            // for(let i = 1 ; i<=10 ; i++){
+                let i = 1
+                while (i<=10){
+                    str+=(`${num} * ${i} = ${num*i}`);
+                    str+='\n'
+                    i++
+                }
+                return str;
+        }
+        let x = table(5)
+        console.log(x);
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let M=60
+        let S=60
+        let SS=60
+        let B=60
+        let E=60
+        let result=((M+S+SS+B+E)/500)*100
+        console.log(result+'%')
+        if(result>=90){
+            console.log('A+')
+        }
+        else if(result>=60 && result<90){
+            console.log('B+')
+        }
+        else if(result>=35 && result<60){
+            console.log('C+')
+        }
+        else{
+            console.log('FAIL')
+        }
+    </script>
+</body>
+</html>

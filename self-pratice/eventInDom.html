@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+            border: 2px solid black;
+            border-radius: 50%;
+            height: 250px;
+            width: 250px;
+            /* display: flex;
+            gap:0.5rem; */
+        }
+        .btn{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- event by using in html -->
+    <div id="container">
+
+    </div>
+    <button onclick="print()" class="btn">Click here</button>
+    
+    <script>
+        function random(){
+            return Math.floor(Math.random()*255)
+        }
+        function print(){
+            let content = document.getElementById('container')
+            const renderBtn = `rgb(${random(1 )},${random(255)},${random(255)})`
+            content.style.backgroundColor=renderBtn
+        }
+    </script>
+</body>
+</html>

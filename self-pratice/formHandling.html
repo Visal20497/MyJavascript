@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>I am Form Handling</h1>
+    
+    UserName : <input type="text" placeholder="Enter your name" id="un"/>
+    <br/>
+    password : <input type="password" placeholder="Enter your pass" id="pass"/>
+    <br/>
+    Email : <input type="email" placeholder="Enter your email" id="email"/>
+    <br/>
+    range : <input type="range" placeholder="select range" id="range"/>
+    <br/>
+    course :
+    <select id="course">
+        <option>Html</option>
+        <option>Css</option>
+        <option>js</option>
+        <option>react</option>
+    </select>
+    <br/>
+    gender :
+    M: <input type="radio" name="gender" value="male"/>
+    w: <input type="radio" name="gender" value="female"/>
+    o: <input type="radio" name="gender" value="other"/>
+    <br/>
+    dropMsg : <textarea name="" id="msg" cols="12" rows="10"></textarea>
+    <br/>
+    <button id="Register">Register</button>
+
+    <script>
+        let un = document.getElementById('un')
+        let pass = document.getElementById('pass')
+        let email = document.getElementById('email')
+        let range = document.getElementById('range')
+        let msg = document.getElementById('msg')
+        let course = document.getElementById('course')
+        let register = document.getElementById('register')
+
+        register.addEventListener('click',()=>{
+            let un1 = un.value
+            let pass1 =pass.value
+            let email1 =email.value
+            let range1 =range.value
+        })
+    </script>
+
+</body>
+</html>

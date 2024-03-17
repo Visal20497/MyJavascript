@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        String
+    </h1>
+    <script>
+        // // Reverse a String or character
+        // let res = ''
+        // // let s1 = 'ankit kumar shaw'
+        // let s1= prompt('Enter any String Or Character')
+        // for(let i=s1.length-1; i>=0; i-- ){
+        //     res+=s1.charAt(i)
+        // }
+        // console.log(res);
+
+        // // wap check the sting is pallindrome or not
+        // let s = prompt('Enter any String or CharacterName')
+        // let res = ''
+        // for(let i=s.length-1; i>=0; i-- ){
+        //     res+=s.charAt(i)
+        // }
+        // res === s ? console.log(`${s} is a pallindrome`) : console.log(`${s} is not a pallindrome`);
+        // //or
+        // function ispal(s1){
+        //     let i = 0;
+        //     let j = s1.length-1
+        //     while(i<j){
+        //         if(s1.charAt(i) != s1.charAt(j)){
+        //             return console.log('not a pallindrome');
+        //             i++ , j--
+        //         }
+        //             return console.log('Pallindrome');
+        //     }
+        // }
+        // ispal(prompt('Enter the name:'))
+
+        // //substring() method
+        // let str = 'race car'
+        // let res= str.substr(0,4)   //substr(startIndex,endIndex)
+        // console.log(res);
+        // let res1 = str.substr(5)   //substr(startIndex)
+        // console.log(res1);
+
+
+        //possible pallindrome character in a string
+        // let s1='malayalam'
+        // for(let i=0; i<s1.length; i++){
+        //     for(let j=i+1; j<s1.length; j++){
+        //         let str = s1.substring(i,j+1)
+        //         console.log(str);
+        //         // if(isPal(str)){
+        //         //     console.log(str);
+        //         // }
+        //     }
+        // }
+        // function isPal(s1){
+        //     let i = 0;
+        //     let j = s1.length-1
+        //     while(i<j){
+        //         if(s1.charAt(i) != s1.charAt(j))return false;
+        //             i++ , j--
+        //     }
+        //     return true; 
+        // }
+
+        //highest pallindrome in a string
+        // let s1='malayalam'
+        // let max =0;
+        // let res ="";
+        // for(let i = 0; i < s1.length; i++){
+        //     for(let j = i+1; j < s1.length; j++){
+        //         let str = s1.substring(i,j+1);
+        //         if(isPal(str))
+        //         {
+        //             let count = str.length
+        //             if(count>max){
+        //                 max = count;
+        //                 res = str;
+        //             }
+        //         }
+        //     }
+        //     console.log(`${res} ${max}`);
+        // }
+        // function isPal(s1){
+        //     let i = 0;
+        //     let j = s1.length-1
+        //     while(i<j){
+        //         if(s1.charAt(i) != s1.charAt(j))return false;
+        //             i++ , j--
+        //     }
+        //     return true; 
+        // }
+
+        // minimun
+        // let s1='malayalam'
+        // let min = s1.length;
+        // let res ="";
+        // for(let i = 0; i < s1.length; i++){
+        //     for(let j = i+1; j < s1.length; j++){
+        //         let str = s1.substring(i,j+1);
+        //         if(isPal(str))
+        //         {
+        //             let count = str.length
+        //             if(count<min){
+        //                 min = count;
+        //                 res = str;
+        //             }
+        //         }
+        //     }
+        //     console.log(`${res}`);
+        // }
+        // function isPal(s1){
+        //     let i = 0;
+        //     let j = s1.length-1
+        //     while(i<j){
+        //         if(s1.charAt(i) != s1.charAt(j))return false;
+        //             i++ , j--
+        //     }
+        //     return true; 
+        // }
+
+        //possible pallindrome character in a string
+        // let name = prompt("Enter any Name:")
+        // for (let i = 0; i < name.length; i++) {
+        //     for (let j = i + 1; j < name.length; j++) {
+        //         let str = name.substring(i, j + 1)
+        //         if (isPal(str)) {
+        //             console.log(str);
+        //         }
+        //     }
+        // }
+        // function isPal(name) {
+        //     let a = 0;
+        //     let b = name.length - 1;
+        //     while (a < b)
+        //     {
+        //         if (name.charAt(a) != name.charAt(b))
+        //             return false;
+        //             a++;
+        //             b--;
+        //     }
+        //     return true;
+        // }
+
+        // //Maximum
+        // let name = prompt("Enter any Name:")
+        // let max = 0 ;
+        // let res = ""
+        // for (let i = 0; i < name.length; i++) {
+        //     for (let j = i + 1; j < name.length; j++) {
+        //         let str = name.substring(i, j + 1)
+        //         if (isPal(str)) {
+        //             let count = str.length
+        //             if(count > max){
+        //                 max = count
+        //                 res = str
+        //             }
+        //         }
+        //     }
+        // }
+        // console.log(`${res}  ${max}`);
+        // function isPal(name) {
+        //     let a = 0;
+        //     let b = name.length - 1;
+        //     while (a < b)
+        //     {
+        //         if (name.charAt(a) != name.charAt(b))
+        //             return false;
+        //             a++;
+        //             b--;
+        //     }
+        //     return true;
+        // }
+
+        // //Minimum
+        // let name = prompt("Enter any Name:")
+        // let min = name.length ;
+        // let res = ""
+        // for (let i = 0; i < name.length; i++) {
+        //     for (let j = i + 1; j < name.length; j++) {
+        //         let str = name.substring(i, j + 1)
+        //         if (isPal(str)) {
+        //             let count = str.length
+        //             if(count < min){
+        //                 min = count
+        //                 res = str
+        //             }
+        //         }
+        //     }
+        // }
+        // console.log(`${res}  ${min}`);
+        // function isPal(name) {
+        //     let a = 0;
+        //     let b = name.length - 1;
+        //     while (a < b)
+        //     {
+        //         if (name.charAt(a) != name.charAt(b))
+        //             return false;
+        //             a++;
+        //             b--;
+        //     }
+        //     return true;
+        // }
+
+        // // duplicate character in a string
+        // let s1 = 'banana'
+        // let ch = [...s1];
+        // let str = ""
+        // for(let i=0; i<ch.length; i++){
+        //     for(let j=i+1; j<ch.length; j++){
+        //         if(ch[i]==ch[j])
+        //         {
+        //             ch[j]=' ';
+        //         }
+        //     }
+        //         if(ch[i]!=' ')
+        //         {
+        //             str+=ch[i]
+        //         }
+        // }
+        //console.log(str);
+
+        // //wap to find occurance of each character
+        // let s1 = prompt('Enter any word:')
+        // let ch = [...s1]
+        // console.log(ch);
+        // for(let i=0; i<ch.length; i++){
+        //     let count = 1
+        //     for(let j=i+1; j<ch.length; j++){
+        //         if(ch[i]==ch[j])
+        //         {
+        //             count++
+        //             ch[j]=" "
+        //         }
+        //     }
+        //     if(ch[i]!=' ')
+        //     {
+        //         console.log(`${ch[i]} = ${count}`);
+        //     }
+        // }
+
+        // //wap to find maximum repeated character in a given string
+        // let s1= prompt('Enter any word:')
+        // let ch = [...s1]
+        // let max = 0
+        // let res = ''
+        // console.log(ch);
+        // for(let i=0; i<ch.length; i++){
+        //     let count = 1;
+        //     for(let j=i+1; j<ch.length; j++){
+        //         if(ch[i] == ch[j])
+        //         {
+        //             count++
+        //             ch[j] = ' '
+        //         }
+        //     }
+        //     
+        //         if(count > max && ch[i]!=' ')
+        //         {
+        //             max = count
+        //             res = ch[i]
+        //         }
+        //    
+        // }
+        // console.log(`${res} = ${max}`);
+
+        // //wap to find minimum repeated character in a given string
+        // let s1= prompt('Enter any word:')
+        // let ch = [...s1]
+        // let min = ch.length
+        // let res = ''
+        // console.log(ch);
+        // for(let i=0; i<ch.length; i++){
+        //     let count = 1;
+        //     for(let j=i+1; j<ch.length; j++){
+        //         if(ch[i] == ch[j])
+        //         {
+        //             count++
+        //             ch[j] = ' '
+        //         }
+        //     }
+        //     if(ch[i]!= ' ')
+        //     {
+        //         if(count < min)
+        //         {
+        //             min = count
+        //             res = ch[i]
+        //         }
+        //     }
+        // }
+        // console.log(`${res} = ${min}`);
+
+        // //Remove duplicate word in a sentence
+        // let s1 = "madam is very beautiful madam speaks malayalam";
+        // let eachWord = s1.split(" ");
+        // let str =""
+        // console.log(eachWord);
+        // for(let i=0; i<eachWord.length; i++){
+        //     for(let j=i+1; j<eachWord.length; j++){
+        //         if(eachWord[i] == eachWord[j])
+        //         {
+        //             eachWord[j] = " "
+        //         }
+        //     }
+        //     if(eachWord[i]!=" "){
+        //         str += eachWord[i]+' '
+        //     }
+        // }
+        //console.log(str);
+
+        // vowels in a character
+        // let s1 = 'jaibalayya'
+        // let vow = 'aeiou'
+        // let chS1 = [...s1]
+        // let chVow = [...vow]
+        // let vowelsCount = 0
+        // let consanentCount =0
+        // for(let i=0; i<chS1.length; i++){
+        //     for(let j=0; j<chVow.length; j++){
+        //         if(chS1[i] == chVow[j]){
+        //             vowelsCount++
+        //         }
+        //     }
+        //     if(chS1[1] != chVow[j]){
+        //         consanentCount++
+        //     }
+        // }
+        // console.log(vowelsCount);
+        // console.log(consanentCount);
+
+        // //wap to find sum of digits in strings
+        // let str = "druva123@45"
+        // let sum = 0
+        // for(let i=0; i<str.length; i++){
+        //     let ch = str.charAt(i)
+        //     if(ch>='0' && ch<='9'){
+        //         let num = Number(ch)
+        //         sum+= num
+        //     }
+        // }
+        // console.log(sum);
+
+        // // jai14 bala26yy1a 42   14+26+1+42 = 83
+        // let str = "jsp12 bangalore42";
+        // let res = ''
+        // let sum = 0
+        // console.log(str.length);
+
+        // for(let i = 0; i<=str.length; i++){
+        //     if(str.charAt(i)>='0' && str.charAt(i)<='9'){
+        //         res+=str.charAt(i)
+        //     }
+        //     else{
+        //         if(res!=""){
+        //             let num = Number(res)
+        //             sum+=num
+        //             res=''
+        //         }
+        //     }
+        // }
+        // console.log(sum);
+
+        // // by using reverse number
+        // let str = "jsp12 bangalore42";
+        // let res = 0
+        // let sum = 0
+        // for(let i = 0; i<=str.length; i++){
+        //     let ch = str[i]
+        //     console.log(ch);
+        //     if(ch>='0' && ch<='9')
+        //     {
+        //         res = res*10+ch
+        //     }
+        //     else
+        //     {
+        //         if(res!=0)
+        //         {
+        //             sum+=res 
+        //             res= 0
+        //         }
+        //     }
+        // }
+        // console.log(sum);
+
+        // // reverse word of a sentence
+        let str = 'i love india'
+        let case1 = str.split(' ')
+        let res = ''
+        console.log(case1);
+        for(let i=case1.length-1; i>=0; i--)
+        {
+            res+=case1[i]+' '
+        }
+        console.log(res);
+        let case2 = ''
+        for(let j=res.length-1; j>=0; j--)
+        {
+            case2+=res[j]
+        }
+        console.log(case2);
+
+        // let case3 = res
+        // let strSplit = res.split(' ')
+        // console.log(strSplit);
+        // for(k=strSplit.length-1;k>=0;k--){
+            
+        // }
+
+
+
+
+        // // reverse the sentence
+        //let str = 'javascript is very easy'
+        
+
+    </script>
+</body>
+
+</html>

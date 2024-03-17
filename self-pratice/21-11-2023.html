@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>
+        higher order function , callback , first class, pure , Impure , IIFE
+    </h1>
+    <script>
+        //higher order function
+        // function temp(cb){
+        //     return temp1()
+        // }
+        // function temp1(){
+        //     console.log('hii i am higher order funtion');
+        // }
+        // temp(temp1)
+
+        // function a(cb){
+        //     return cb()
+        // }
+        // console.log(a(function (){
+        //     return 21
+        // }));
+        //callback function
+        // function a(cb){
+        //     cb()
+        //     console.log('hii i am a'); 
+        // }
+        // function b(){
+        //     console.log('hii i am b');
+        // }
+        // a(b)
+        //first class
+
+        //pure function
+        // let mul = (a,b)=>{
+        //     console.log(`${a*b}`);
+        // }
+        // mul(2,3);
+        // mul(2,3);
+        // mul(2,3);
+        // mul(2,3);
+        // mul(2,3);
+        // mul(2,3);
+        // mul(2,3);
+
+        //Impure function
+        // let randomNumber;
+        // function demo(num){
+        //     randomNumber = Math.trunc((Math.random()*100))
+        //     return randomNumber * num
+        // }
+        // console.log(demo(5));
+        // console.log(demo(5));
+        // console.log(demo(5));
+        // console.log(demo(5));
+        // console.log(demo(5));
+        // console.log(demo(5));
+        // console.log(demo(5));
+        // console.log(demo(5));
+
+        //IIFE(Immediate invoke function expression)
+        // (
+        //     function () {
+        //         console.log('hi i am IIFE');
+        //     }
+        // ) ()
+
+        // (
+        //     function (a , b) {
+        //         console.log('hi i am IIFE',a+b);
+        //     }
+        // ) (2 , 3)
+
+    </script>
+</body>
+
+</html>

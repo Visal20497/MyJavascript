@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        height: 50vh;
+        width: 50vw;
+        border: 5px solid greenyellow;
+    }
+</style>
+<body>
+    <!-- <div class="container" onclick="first()" onclick="second()">
+        <h1>hello this side ankit</h1>
+    </div>
+
+ this is the problem come when you use attribute way and reference way -->
+    <!-- <script>
+        function first(){
+            console.log(1);
+        }                       //o/p always giving 1 it override the click event
+        function second(){
+            console.log(2);
+        }
+    </script> --> 
+
+    <!-- by addeventlistener way -->
+
+    <div class="container">
+        <h1>hello this side ankit</h1>
+    </div>
+    <script>
+        let container = document.querySelector('.container')
+        container.addEventListener('click',()=>{
+            console.log('hello i am click');
+        })
+        container.addEventListener('click',()=>{
+            console.log('hello i am validation');
+        })
+    </script>
+</body>
+</html>

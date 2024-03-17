@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let num = 121
+        // let temp = num
+        // let reverseNumber = 0
+        
+        // while(temp>0){
+        //     let rem = temp%10
+        //     reverseNumber = reverseNumber*10 + rem
+        //     temp = Math.trunc(temp/10)
+        // }
+        // reverseNumber === num ? console.log('Pallidrome no') : console.log('Not a pallindrome no');
+
+        //inrange
+        // let start = Number(prompt("Enter Starting Number:"))
+        // let end = Number(prompt("Enter Ending Number:"))
+        // for(let i=start; i<=end; i++){
+        //     pallinNumber(i)
+        // }
+        // function pallinNumber(num){
+        //     let temp = num 
+        //     let reverseNumber = 0
+        //     while(temp>0){
+        //         let rem =  temp%10
+        //         reverseNumber = reverseNumber*10 + rem
+        //         temp = Math.trunc(temp/10)
+        //     }
+        //     if(reverseNumber === num){
+        //         console.log(num);
+        //     }
+        // }
+
+        // //skip in range
+        // let start = Number(prompt("Enter Starting Number:"))
+        // let end = Number(prompt("Enter Ending Number:"))
+        // let loopCount=0
+        // for(let i=start; i<=end; i++){
+        //     pallinNumber(i)
+        // }
+        // function pallinNumber(num){
+        //     let temp = num 
+        //     let reverseNumber = 0
+        //     while(temp>0){
+        //         let rem =  temp%10
+        //         reverseNumber = reverseNumber*10 + rem
+        //         temp = Math.trunc(temp/10)
+        //     }
+        //     if(reverseNumber === num){
+        //         loopCount++;
+        //         if(loopCount % 2 !=0 ){
+        //             console.log(num);
+        //         }
+        //     }
+        // }
+
+        //next number
+    //     let loopCount=0
+    //     function pallinNumber(num){
+    //         for(let i=start; i<= start+1; i++){
+    //             let temp = num 
+    //             let reverseNumber = 0
+    //             while(temp>0){
+    //                 let rem =  temp%10
+    //                 reverseNumber = reverseNumber*10 + rem
+    //                 temp = Math.trunc(temp/10)
+    //             }
+    //             if(reverseNumber === num){
+    //                 if(loopCount === 1 ){
+    //                     console.log(num);
+    //                 }
+    //                 loopCount++;
+    //             }
+    //         }
+    //     }
+    // pallinNumber=(prompt("Enter Starting Number:"))
+
+    let height = 179
+    let weight = 89;
+    let bmi = (weight / ((height * height) / 10000))
+    let idlebmi = bmi - 24.9
+    console.log(bmi);
+    console.log(idlebmi);
+    let lossweight = (idlebmi* ((height*height)/10000))
+    console.log(lossweight);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Electricity Bill</h1>
+    <script>
+        let bill=215
+        let price=0
+        if(bill >=0 && bill<=200){
+            console.log('free')
+        }
+        if(bill >200 && bill<=250){
+            price=(bill-200)*3  
+            console.log(price)
+        }
+        if(bill>250 && bill<=300){
+            price=(bill-250)*5+(150)
+            console.log(price)
+        }
+        if(bill>300){
+            price=(bill-300)*7+(400)
+            console.log(price)
+        }
+    </script>
+</body>
+</html>

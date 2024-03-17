@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function strongNumber(num){
+        //     let temp = num
+        //     let sum =0
+        //     while (temp>0){
+        //         let rem = temp%10
+        //         let fact = 1
+        //         for(let i=1; i<=rem; i++){
+        //             fact*=i
+        //         }
+        //         sum+=fact
+        //         temp = Math.trunc(temp/10)
+        //     }
+        //     sum === num ? console.log('Strong Number') : console.log('Not a Strong Number');
+        // }
+        // strongNumber(145)
+
+        //inrange
+        let start = Number(prompt('Enter the starting number:'))
+        let end = Number(prompt('Enter the ending number:'))
+        for (let i = start; i <= end; i++) 
+        {
+            strongNumber(i)
+        }
+        function strongNumber(num){
+            let temp = num
+            let sum =0
+            while (temp>0){
+                let rem = temp%10
+                let fact = 1
+                for(let i=1; i<=rem; i++){
+                    fact*=i
+                }
+                sum+=fact
+                temp = Math.trunc(temp/10)
+            }
+            if(sum === num){
+                console.log(num);
+            }
+        }
+        
+    </script>
+</body>
+</html>

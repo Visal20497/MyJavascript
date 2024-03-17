@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //occurance of each character
+        // let str = 'madam'
+        // for(let i=0; i<str.length; i++){
+        //     let count = 1;
+        //     for(let j=i+1; j<str.length; j++){
+        //         if(str[i] == str[j]){
+        //             count ++
+        //         }
+        //     }
+        //     console.log(`${str[i]} = ${count}`);
+        // }
+
+        //
+        // let str = 'knowledge'
+        // let ch1 = [...str]
+        // console.log(ch1);
+
+        //anagram
+        function anagram(str1, str2) {
+            if (str1.length != str2.length)
+                return false
+            if (str1.split("").sort().join('') === str2.split("").sort().join(''))
+                return console.log('Anagram');
+        }
+        anagram('race','caro')
+
+    </script>
+</body>
+
+</html>

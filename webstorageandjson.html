@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>web storage and json</h1>
+    <button id="btn">click</button>
+    <script>
+        let arr = [{id:1,name:'ankit'},{id:2,name:'jinka'},{id:3,name:'vinod'},{id:4,name:'rakhi'}]
+
+        // //set item
+        // localStorage.setItem('phase1',JSON.stringify(arr))
+        // localStorage.setItem('phase2',JSON.stringify(arr))
+        // localStorage.setItem('phase3',JSON.stringify(arr))
+
+        // //get item
+        // let x = JSON.parse(localStorage.getItem('phase1'))
+
+        // //remove item
+        // localStorage.removeItem('phase2')
+
+        // //clear item
+        // localStorage.clear()
+        
+        let btn=document.getElementById('btn')
+        btn.addEventListener('click',()=>{
+            sessionStorage.setItem('phase1',JSON.stringify(arr))
+            localStorage.setItem('phase1',JSON.stringify(arr))
+        })
+    </script>
+
+</body>
+</html>

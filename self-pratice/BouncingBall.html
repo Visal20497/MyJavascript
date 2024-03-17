@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+        .container{
+            border: 4px solid black;
+            display: flex;
+            justify-content:center ;
+            align-items: center;
+            width: 50vw;
+            height: 50vh;
+        }
+        .ball{
+            border: 2px solid rgb(96, 180, 103);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: greenyellow;
+            padding: 1rem;
+        }
+        .common{
+            border: 1px solid black;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ball"></div>
+    </div>
+    <div class="direction">
+        <div id="left" class="common">&#8592;</div>
+        <div id="up" class="common">&#8593;</div>
+        <div id="right" class="common"> &#8594;</div>
+        <div id="down" class="common">&#8595;</div>
+    </div>
+</body>
+</html>

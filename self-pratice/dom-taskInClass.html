@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .styleInClass{
+        /* border-collapse: collapse; */
+    }
+</style>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        let value=1;
+        const rowValue = Number(prompt('Enter Row: '))
+        const colValue = Number(prompt('Enter column: '))
+
+        const root = document.getElementById('root')
+        let table = document.createElement('table')
+        for(let row=1 ; row <= rowValue ; row++){
+            let createRow = document.createElement('tr')
+            for(let col=1 ; col <= colValue ; col++){
+                let createCol = document.createElement('td')
+                createCol.innerText=value++;
+                // createCol.innerText=`A`;
+                createRow.appendChild(createCol)
+                row %2 == 0? createRow.style.backgroundColor='red': createCol.style.backgroundColor='green'
+            }
+            table.appendChild(createRow)
+        }
+        // table.className='styleInClass'
+        // table.border='1'
+        table.setAttribute('border','1')
+        table.setAttribute('style','border-collapse:collapse')
+        table.setAttribute('cellpadding','10')
+        table.setAttribute('cellspacing','10')
+        root.appendChild(table)
+    </script>
+</body>
+
+</html>

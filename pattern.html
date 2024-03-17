@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // *****
+        // let s =''
+        // for(let i=1; i<=5; i++){
+        //     s+='*'
+        // }
+        // console.log(s);
+
+        // * * * * * 
+        // * * * * * 
+        // * * * * * 
+        // * * * * * 
+        // * * * * * 
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str +="*"+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+        
+        // 11111
+        // 22222
+        // 33333
+        // 44444
+        // 55555
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str +=row
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+        
+        // 12345
+        // 12345
+        // 12345
+        // 12345
+        // 12345
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str +=col
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+        
+        // *****
+        // -----
+        // *****
+        // -----
+        // *****
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         row%2!=0?str +='*':str+='-'
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // * * * * * 
+        // *       * 
+        // *       * 
+        // *       * 
+        // * * * * * 
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         row==1||col==1 || row==5||col==5 ?str +='*'+' ':str+='  '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // * * * * * 
+        // * *   * * 
+        // *   *   * 
+        // * *   * * 
+        // * * * * * 
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         row==1||col==1 || row==5||col==5 || row==col ||row+col==6 ?str +='*'+' ':str+='  '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // * 2 3 4 5 
+        // 1 * 3 4 5 
+        // 1 2 * 4 5 
+        // 1 2 3 * 5 
+        // 1 2 3 4 *
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         if(row==col){
+        //             str+="*"+' '
+        //         }else{
+        //             str+=col+' '
+        //         }
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // let str=""
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         if(row==col || col==5 || col==1 || row==3 || row+col==6 || row==1 || row==5){
+        //             str+="*"+' '
+        //         }else{
+        //             str+=col+' '
+        //         }
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // * 
+        // * * 
+        // * * * 
+        // * * * * 
+        // * * * * * 
+        // let str=''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=row; col++){
+        //         str+='*'+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // 1 
+        // 1 2 
+        // 1 2 3 
+        // 1 2 3 4 
+        // 1 2 3 4 5 
+        // let str=''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=row; col++){
+        //         str+=col+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // 1 
+        // 2 1 
+        // 3 2 1 
+        // 4 3 2 1 
+        // 5 4 3 2 1 
+        // let str=''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=row; col>=1; col--){
+        //         str+=col+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // 5 
+        // 4 5 
+        // 3 4 5 
+        // 2 3 4 5 
+        // 1 2 3 4 5 
+        // let str=''
+        // for(let row=5; row>=1; row--){
+        //     for(let col=row; col<=5; col++){
+        //         str+=col+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        //error i have to check
+        // let str=''
+        // for(let row=5; row>=1; row--){
+        //     for(let col=row; col<=5; col++){
+        //         str+=row+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+        
+        // 1 2 3 4 5 
+        //   1 2 3 4 
+        //     1 2 3 
+        //       1 2 
+        //         1 
+        // let str=''
+        // let n=5
+        // for(let row=1; row<=n; row++){
+        //     for(let col=1; col<row; col++ ){
+        //         str+='  '
+        //     }
+        //     for(let col=1; col<=n+1-row ; col++){
+        //         str+=col+' '
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+
+        // let str=''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         if(col>=6-row){
+        //             str+='*'
+        //         }else{
+        //             str+=' '
+        //         }
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        // let res = "";
+        // let stars = 1;
+        // let space = 3;
+        // let n =7;
+
+        // for(let i=1; i<=n; i++){
+        //     for(let j=1; j<=space; j++)
+        //     {
+        //         res+=" ";
+        //     }
+        //     for(let j=1; j<=stars; j++)
+        //     {
+        //         res+='*';
+        //     }
+        //     if(i<= Math.trunc(n/2))
+        //     {
+        //         stars+=2;
+        //         space--
+        //     }
+        //     else
+        //     {
+        //         stars-=2;
+        //         space++
+        //     }
+        //     res += '\n'
+        // }
+        // console.log(res);
+
+        let str = ''
+        let a = 1
+        let b = 1
+        for(let i = 1 ; i<=5; i++){
+            for(j = 1 ; j<=5 ; j++){
+                str+=a+'  '
+                a++
+            }
+            str+='\n'
+        }
+        console.log(str);
+
+      // *
+      // **
+      // ***
+      // ****
+      // let str=''
+      // for(let row=1; row<=4; row++){
+      //     for(let col=1; col<=4; col++){
+      //         if(row>=col){
+      //             str=str+'*'
+      //         }
+      //     }
+      //     str=str+'\n'
+      // }
+      // console.log(str)
+
+      // 1	2	3	4
+      // 5	6	7	8
+      // 9	10	11	12
+      // 13	14	15	16
+
+      // let str=''
+      // let count=1
+      // for(let row=1; row<=4; row++){
+      //     for(let col=1; col<=4; col++){
+      //         str+=count+'\t'
+      //         count++
+      //     }
+      //     str=str+'\n'
+      // }
+      // console.log(str)
+
+      // 1 2 3 4
+      // 1 6 7 8
+      // 1 10 11 12
+      // 1 14 15 16
+      // let str=''
+      // let count=1
+      // for(let row=1; row<=4; row++){
+      //     for(let col=1; col<=4; col++){
+      //         if(col==1){
+      //             str+=1+' '
+      //         }else{
+      //             str+=count+' '
+      //         }
+      //         count++
+      //     }
+      //     str=str+'\n'
+      // }
+      // console.log(str)
+
+      // 1 0 0 0
+      // 0 1 0 0
+      // 0 0 1 0
+      // 0 0 0 1
+      // let str=''
+      // for(let row=1; row<=4; row++){
+      //     for(let col=1; col<=4; col++){
+      //         if(row==col){
+      //             str+='1'+' '
+      //         }else{
+      //             str+='0'+' '
+      //         }
+      //     }
+      //     str=str+'\n'
+      // }
+      // console.log(str)
+
+      // @
+      // @ *
+      // @ * @
+      // @ * @ *
+      // let str=''
+      // for(let row=1; row<=4; row++){
+      //     for(let col=1; col<=4; col++){
+      //         if(row>=col){
+      //             if(col%2!=0){
+      //                     str+='@'+' '
+      //                 }else{
+      //                     str+='*'+' '
+      //             }
+      //         }
+      //     }
+      //     str=str+'\n'
+      // }
+      // console.log(str)
+
+      // 1	1	1	1
+      // 1			1
+      // 1			1
+      // 1	1	1	1
+          // let str=''
+          // const N = 40
+          // for(let i=1; i<=N; i++){
+          //   for(let j=1; j<=N; j++){
+          //     (i==1 || i==N) || (j==1 || j==N)?str+='* ':str+='  '
+          //   }
+          //   str+='\n'
+          // }
+          // console.log(str)
+
+      // ****
+      // ***
+      // **
+      // *
+      // let str=''
+      // for(let row=1; row<=4; row++){
+      //     for(let col=4; col>=row; col--){
+
+      //             str=str+'*'
+      //     }
+      //     str=str+'\n'
+      // }
+      // console.log(str)
+
+  
+// ****
+//  ***
+//   **
+//    *
+      // let str = "";
+      // for (let row = 1; row <= 4; row++) {
+      //     for (let col = 1; col <= 4; col++) {
+      //         if(row<=col){
+      //             str+='*'
+      //             }
+      //         else{
+      //             str+=' '
+      //         }
+      //     }
+      //     str+='\n'
+      // }
+      // console.log(str)
+    
+// *
+// **
+// ***
+// ****
+      // let str=''
+      //     for(let i=1; i<=4; i++){
+      //       for(let j=1; j<=4; j++){
+      //         if(j<=i){
+      //           str+='*'
+      //         }
+      //       }
+      //       str+='\n'
+      //     }
+      //     console.log(str)
+
+// *   *
+//  * * 
+//   *  
+//  * * 
+// *   *
+      // let str = ''
+      // for(let row=1; row<=5; row++){
+      //     for(let col=1; col<=5; col++){
+      //         row==col || row+col==6 ? str+='* ':str+='  '
+      //     }
+      //     str+='\n'
+      // }
+      // console.log(str)
+
+// *******
+//  *****
+//   ***
+//    *
+      // str = "";
+      // for (let i = 1; i <= 4; i++) {
+      //   for (let j = 1; j <= 4; j++) {
+      //     i <= j ? (str += "*") : (str += " ");
+      //   }
+      //     for(let d=3; d>=i; d--){
+      //       str+='*'
+      //     }
+      //   str += "\n";
+      // }
+      // console.log(str);
+
+
+      // str = "";
+      // for (let i = 1; i <= 4; i++) {
+      //   for (let j = 1; j <= 4; j++) {
+      //     i <= j ? (str += "*") : (str += " ");
+      //   }
+      //     for(let d=3; d>=i; d--){
+      //       str+='*'
+      //     }
+      //   str += "\n";
+      // }
+      // console.log(str);
+
+    
+
+
+        // let temp = 98
+    // let temp1 = 38
+    // let celcius = (temp-32)*5/9
+    // // // let farenheit = (38 * 9/5)+32 
+    // // console.log(farenheit)
+    // console.log(celcius.toFixed(2))
+
+    // function temperature(temp,con){
+    //     if(con=='f'){
+    //         return (temp*9/5)+32 + ' f'
+    //     }
+    //     if(con=='c'){
+    //         return (temp-32)*5/9 +' c'
+    //     }
+    // }
+    // let result = temperature(Number(prompt('Enter the Temperature:' )),(prompt('Farenheit(f)/celcius(c)')))
+    // alert(result)
+
+//     1    
+//    212   
+//   32123  
+//  4321234 
+// 543212345
+    // let str=''
+    // for(let row=1; row<=5 ; row++){
+    //     let a=row
+    //     for(let col=5; col>=1; col--){
+    //         col<=row?str+=a-- :str+=' '
+    //     }
+    //     for(let k=2; k<=5; k++){
+    //         k<=row?str+=a++ + 2:str+=' '
+    //     }
+    //     str+='\n'
+    // }
+    // console.log(str)
+
+
+
+
+
+      // 1.
+        // *****
+        // *****
+        // *****
+        // *****
+        // *****
+
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str+='*'
+        //     }
+        //     str +='\n'
+        // }
+        // console.log(str)
+
+        //2.
+        // 23456
+        // 34567
+        // 45678
+        // 56789
+        // 678910
+
+        // let str=''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         str+=(row+col)
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        //3.
+        // *@*@
+        // *@*@
+        // *@*@
+        // *@*@
+        // let str=''
+        // for(let row=1; row<=4; row++){
+        //     for(let col=1; col<=4; col++){
+        //         col%2!=0 ? str+='*' : str+='@'
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+        //4.
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=5; col++){
+        //         row>=col ? str+='*' : str+=' '
+        //     }
+        //     str +='\n'
+        // }
+        // console.log(str)
+
+        //5.
+        // 2
+        // 12
+        // 456
+        // 1234
+        // 678910
+
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=1; col<=row; col++){
+        //         row%2!=0? str+=(row+col)+'': str+=col+''
+        //         }
+        //         str +='\n'
+        //     }
+        // console.log(str)
+
+        //6.
+        // aaaaa
+        // aaaa
+        // aaa
+        // aa
+        // a
+        // let str =''
+        // for(let row=1; row<=5; row++){
+        //     for(let col=5; col>=row; col--){
+        //         str+='a'
+        //     }
+        //     str +='\n'
+        // }
+        // console.log(str)
+
+        //7.
+        // let str = ''
+        // for (let row = 1; row <= 6; row++) {
+        //     for (let col = 6; col >= row; col--) {
+        //         if((row+col)%2 == 0 || row % 2 == 0){
+        //             str+='b'
+        //         }else {
+        //             str+='a'
+        //         }
+        //     }
+        //     str+='\n'
+        // }
+        // console.log(str);
+
+
+
+
+
+    </script>
+</body>
+</html>
