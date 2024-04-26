@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input::placeholder {
+            color: blueviolet
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1">My Pratice
+        <h3 id="h3">Create the table with help of javascript</h3>
+    </h1>
+    <input type="text" placeholder="Enter your input...">
+    <table border="2" style="border-collapse: collapse;width:30%;height:200px;">
+        <caption>My table</caption>
+        <thead>
+            <tr>
+                <th colspan="4">1</th>
+                <th>2</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td rowspan="4">7</td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td colspan="3">9</td>
+            </tr>
+            <tr>
+                <td rowspan="2">10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td colspan="2">14</td>
+                <td>15</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // const cart = ["shoes", "pants", "T-shirt"]
+        //    createOrder (cart, function(orderId){
+        //         proceedToPayment(orderId)
+        //     })
+
+        //  createOrder(cart).then((orderId)=>{proceedToPayment(orderId)})
+        //    .then((paymentInfo)=>{showOrderSummary(paymentInfo)})
+        //    .then((paymentInfo)=>{updateWalletBalance(paymentInfo)})
+
+
+        // const promise = createOrder(cart)
+        // function createOrder(cart) {
+        //     // createOder
+        //     // validateCart
+        //     // orderId
+        //     const pr = new Promise(function (resolve, reject) {
+        //         if (!validateCart(cart)) {
+        //             const err = new Error("cart is not valid")
+        //             reject(err)
+        //         }
+        //         // logic for createOrder
+        //         const orderId = "12345"
+        //         if (orderId) {
+        //             resolve(orderId)
+        //         }
+        //     })
+        //     return pr
+        // }
+        // function validateCart(cart) {
+        //     return true
+        // }
+        // function proceedToPayment(orderId) {
+        //     return new Promise(function (resolve, reject) {
+        //         resolve("Payment successfull")
+        //     })
+        // }
+
+
+        // promise.then(function (orderId) {
+        //     console.log(orderId)
+        //     return orderId
+        // }).then(function (orderId) {
+        //     return proceedToPayment(orderId)
+        // })
+        //     .then(function (paymentInfo) {
+        //         console.log(paymentInfo)
+        //     })
+        //     .catch((err) => { console.log(err) })
+        // console.log(promise)
+
+
+
+
+        // function find(index) {
+        //     let a = []
+        //     for (let i = 0; i < 1000000; i++) {
+        //         a[i] = i * i
+        //     }
+
+        //     console.log(a[index])
+        // }
+        // console.time("6")
+        // find(6)
+        // console.timeEnd("6")
+        // console.time("12")
+        // find(12)
+        // console.timeEnd("12")
+
+
+        // let view
+        // function likeTheVideo() {
+        //     view = "vishal"
+        //     console.log("hello", view)
+        // }
+
+        // likeTheVideo()
+
+
+
+        // function counter() {
+        //     var _counter = 0
+
+        //     function add(increment) {
+        //         _counter += increment
+        //     }
+
+        //     function retrive() {
+        //         return "Counter =" + _counter
+        //     }
+
+        //     return {
+        //         add,
+        //         retrive
+        //     }
+        // }
+        // const c = counter()
+        // c.add(5)
+        // c.add(10)
+        // console.log(c.retrive())
+
+
+
+        //         let view
+        // function likeTheVideo(){
+
+        //     let called=0
+
+        //     return function (){
+        //         if(called >0){
+        //             console.log("already done")
+        //         }else{
+        //             view="vishal"
+        //     console.log("hello",view)
+        //     called++
+        //         }
+        //     }
+
+        // }
+        // let issubscribed =likeTheVideo()
+        // issubscribed()
+        // issubscribed()
+
+
+        // for(var i=0;i<3;i++){
+        //     setTimeout(function log(){
+        //         console.log(i)         
+        //     },i* 1000)
+        // }
+
+
+
+        //first class function / first class citizen
+        // let a = function (args) {
+        //     return function xyz() {
+        //         console.log("I am the first class function")
+        //     }
+        // }
+
+        // (function add(a = 10, b = 20) {
+        //     console.log(a + b)
+        // }())
+
+
+        // object created by the Object.created method.
+        // const personPrototype = {
+        //     greet() {
+        //         console.log(`Hello, my name is ${this.name}.`);
+        //     }
+        // };
+
+        // const person = Object.create(personPrototype);
+        // person.name = 'John';
+        // person.age = 30;
+        // person.gender = 'male';
+        // console.log(person)
+
+
+
+        // object created by the Object.assign method
+        //     const Defaults={
+        //        color:"Blue",
+        //        height:"100px"
+        //     }
+        //     const custom={
+        //         height:"200px"
+        //     }
+        //     const newObject=Object.assign({},Defaults,custom)
+        //     console.log(newObject)
+
+
+        //   object created by the function constructor method
+        // function details(name,add){
+        //     this.name=name,
+        //     this.add=add
+        // }
+        // let obj=new details("Vishal","UP")
+        // console.log(obj)
+
+
+        // object created by the intances method
+        // let obj1 = {
+        //     name:"Vishal",
+        //     age: "22",
+        //     add:"Delhi",
+        //     ajldkfjlsd:"hello"
+        // }
+        // let obj = new Object(obj1)
+        // // obj.name = "Vishal Maheshwari"
+        // // obj.add = "UP"
+        // delete obj
+        // console.log(obj)
+
+
+
+
+        // let newObject={
+        //     name:"visahl44646",
+        //      details(){
+        //        console.log( this.name)
+        //     }
+        // }
+        // console.log(newObject['name'])
+
+
+
+        // let obj = {
+        //     name: "Vishal",
+        //     newObj: {
+        //         name: "xyz",
+        //         add: "ABC",
+        //     }
+        // }
+        // function print() {
+        //             console.log(this.name)
+        //         }
+        // let fn=print.bind(obj)
+        // fn()
+
+
+        // for(let x in obj){
+        //     console.log(obj[x])
+        // }
+
+
+
+
+        // let array=new Array(2,3)
+        // console.log(array)
+        // function add(){
+        //     console.log("hello")
+        // }
+        // add()
+        // add.call()
+        // add.apply()
+
+
+        //    let a=10
+        //     function add() {
+        //         return function(){
+        //             let b = 12
+        //             console.log( a + b)
+        //         }
+        //     }
+        //     add()()
+
+
+
+        // async function name (){
+        //         let data=await setTimeout(()=>{
+        //             console.log("hello")
+        //         },3000)
+        //       let data3=await  console.log("end")
+        //         let data2=await setTimeout(()=>{
+        //             console.log("data2")
+        //         },3000)
+        //         console.log("end")
+        //     }
+        //     name()
+
+
+
+
+        // let array = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10,{number:13}], [11]]], 12, { number: 12 }]
+        // function arraySum(arr) {
+        //     let sum = 0
+        //     for (let i = 0; i < arr.length; i++) {
+        //         if (typeof arr[i] === 'object' && !Array.isArray(arr[i])) {
+        //             sum += sumObject(arr[i])
+        //         }
+        //         else if (typeof arr[i]==='object') {
+        //             sum += arraySum(arr[i])
+        //         }
+        //         else {
+        //             sum += arr[i]
+        //         }
+        //     }
+        //     return sum
+        // }
+        // function sumObject(args) {
+        //     let sum = 0
+        //     for (let x in args) {
+        //         if (typeof args[x] === "number") {
+        //             sum += args[x]
+        //         }
+        //         else if(Array.isArray(args[x])){
+        //             sum+=arraySum(args[x])
+        //         }
+        //         else if(typeof args[x]==="object" ){
+        //           sum+=sumObject(args[x])
+        //         }
+        //     }
+        //     return sum
+        // }
+        // console.log(arraySum(array))
+
+
+
+        // let arr = [1, 2, 3, 4, 5, 4, 5, 2]
+        // let result = arr.indexOf(2)
+        // let result2 = arr.lastIndexOf(2)
+        // console.log(result)
+
+        // let newArray = Array.of(1, 2, 3)
+        // console.log(newArray)
+
+
+        // let ar = []
+        // arr.forEach((item) => {
+        //     if (item > 3) {
+        //         ar.push(item)
+        //     }
+        // })
+        // console.log(ar)
+
+
+
+        // let object = {
+        //     name: "Vishal",
+        //     add: {
+        //         pa: "UP",
+        //         ca: "Bangalore",
+        //         hobbies: {
+        //             isPlayCricket: true,
+        //             isWroking: "Yes",
+        //             sal: {
+        //                 amount: "NOT disclose"
+        //             }
+        //         }
+        //     }
+        // }
+        // let object2 = {
+        //     ...object, add: {
+        //         ...object.add, hobbies: {
+        //             ...object.add.hobbies, sal: {
+        //                 ...object.add.hobbies.sal
+        //             }
+        //         }
+        //     }
+        // }
+        // object.add.hobbies.sal.amount=1000
+        // console.log(object.add.hobbies.sal.amount)
+        // console.log(object2.add.hobbies.sal===object.add.hobbies.sal)
+
+
+        // let newobj={...object}
+        // newobj.add.hobbies.sal.amount=200
+        // console.log(object)
+
+
+
+        // create the table with the help of  javascript.
+        let h3 = document.getElementById('h3')
+        let table = document.createElement('table')
+        for (let i = 1; i < 5; i++) {
+            let thead = document.createElement('thead')
+            let tbody = document.createElement('tbody')
+            let tr = document.createElement("tr")
+            for (let j = 1; j < 5; j++) {
+                let td = document.createElement('td')
+                let th = document.createElement('th')
+                if (i === 1) {
+                    th.innerHTML = `<h3>Headings${j}</h3>`
+                    tr.appendChild(th)
+                    thead.appendChild(tr)
+                }
+                else {
+                    td.innerText = `row:${i - 1},column:${j}`
+                    tr.appendChild(td)
+                    tbody.appendChild(tr)
+                }
+            }
+            table.appendChild(thead)
+            table.appendChild(tbody)
+        }
+        table.border = "solid 2px black"
+        table.style.borderCollapse = "Collapse"
+        h3.append(table)
+
+
+
+        // function method  -call method
+        // let obj={
+        //     name:"Vishal",
+        //     add:"UP"
+        // }
+        // function demo(){
+        //     console.log(`My name is ${this.name} and my address is ${this.add}`)
+        // }
+        // demo.call(obj)
+
+        // function demo2( age){
+        //     console.log(`MY name is ${this.name} and my address is ${this.add} and my age is ${age}`)
+        // }
+
+        // demo2.call(obj,26)
+
+
+        // function demo(name, age){
+        //     {this.name=name,
+        //     this.age=age}
+        // }
+        // function demo2(name, age, add){
+        //     demo.call(this,name,age)
+        //     this.add=add
+        // }
+        // let x=new demo2("Vishal",24,"UP")
+        // console.log(x)
+
+        // let obj={
+        //     name:"Vishal",
+        //     age:"26",
+        //     print:function(){
+        //         console.log(`my name ${this.name} and age is ${this.age}`)
+        //     }
+        // }
+        // let obj2={
+        //     name:"Maheshwari",
+        //     age:"25"
+        // }
+        // obj.print.call(obj2)
+
+        // function method -apply
+        //    let obj={
+        //     name:"Vishal",
+        //     age:26
+        //    }
+        //    function demo(add){
+        //     console.log(`my name is ${this.name} and my add ${this.age} and ${add} `)
+        //     console.log(this.name,this.age)
+        //    }
+
+        //    demo.apply(obj, ["UP"])
+
+        // function metho-bind 
+        //    let obj={
+        //     name:"Vishal",
+        //     age:26
+        //    }
+        //    function demo(add){
+        //     console.log(this.name,this.age)
+        //    }
+        //    let x=demo.bind(obj)
+        //    x()
+
+        // function add(name,callback){
+        //    console.log("first")
+        //    callback(name)
+        //    console.log("Last")
+        // }
+        // function callback(name){
+        //     console.log(name)
+        // }
+        // add("Vishal",callback)
+
+
+
+        // let x1=new Promise((res,rej)=>{
+        //   setTimeout(()=>{
+        //     res("hi I am resolve 1st")
+        //   },1000)
+
+        // })
+        // let x2=new Promise((res,rej)=>{
+        //     setTimeout(()=>{
+        //     res("hi I am resolve 2st")
+        //   },3000)
+        // })
+        // let x3=new Promise((res,rej)=>{
+        //     setTimeout(()=>{
+        //     res("hi I am resolve 3st")
+        //   },4000)
+        // //   rej("hi I am reject 3rd")
+        // })
+
+        // let data=Promise.any([x1,x2,x3]).then((item)=>{
+        //     console.log(item)
+        //     console.log("hjdlfjld")
+        // }).catch((error)=>{
+        //     console.log(error)
+        // })
+
+
+        // function generateNumber(num) {
+        //     return new Promise((res, rej) => {
+        //         setTimeout(() => {
+        //             res(`this is the generated number ${num}`)
+        //         }, 2000)
+        //     })
+        // }
+        // generateNumber(10).then((a) => {
+        //         console.log(a)
+        //         return generateNumber(a * 2)
+        //     })
+        //   .then((b) => {
+        //         console.log(b)
+        //         return generateNumber(b * 3)
+        //     })
+        //     .then((c) => {
+        //         console.log(c)
+        //     }).catch((error) => {
+        //         console.log(error)
+        //     })
+
+
+
+        //     let student={
+        //         name:"Vishal",
+        //         age:26,
+        //         add:"UP"
+        //     }
+        //     let teacher={
+        //         isWorking:true
+        //     }
+
+        //     teacher.__proto__=student
+        //     teacher.name="abc"
+        //     console.log(teacher.name)
+        //     let a=10
+        //     let b=a.toString()
+
+
+        //    array.__proto__.isFindLength=function(){
+        //     let count=1
+        //     for(let i=1;i<this.length;i++){
+        //         count++
+        //     }
+        //     return count
+        //    }
+        //   let x= array.isFindLength(array)
+        //   console.log(x)
+
+
+
+        //   function deep(arg){
+        //     if(Array.isArray(arg)){
+        //         let globalArr=[]
+        //         for(let i=0;i<arg.length;i++){
+        //             globalArr.push(deep(arg[i]))
+        //         }
+        //         return globalArr
+        //     }
+        //     else if(typeof arg=="object" && arg!=null){
+        //         let obj={}
+        //         for(let x in arg){
+        //             obj[x]=arg[x]
+        //         }
+        //         return obj
+        //     }
+        //     else {
+        //         return arg
+        //     }
+        //   }
+        //   let array=[1,2,3,6,66,5,8,9,10]
+        //   let newaray=deep(array)
+        //   console.log("deep Copy",newaray)
+        //   let newaray2=array.slice(0)
+        //   console.log("shallow copy",newaray2)
+
+        //   console.log(array===newaray)
+        //   console.log(JSON.stringify(array)===JSON.stringify(deep(array)))
+
+
+
+        // let obj={
+        //   name:"Vishal",
+        // add:"up"
+        //}
+        //let obj2=JSON.stringify(obj)
+        //let x=JSON.parse(obj2)
+        //console.log(x===obj)
+        //let obj3={...obj}
+        //console.log(obj.name===obj3.name)
+
+
+        function details(name, add) {
+            this.name = name,
+                this.add = add
+        }
+        let obj = new details("Vishal", "UP")
+        console.log(obj)
+
+       // recurision find the sum of the n number.
+        function sum(n) {
+            if (n === 0) {
+                return 0
+            }
+            else {
+               return n + sum(n - 1)
+            }
+        }
+        console.log(sum(5))
+
+        function factorial(n){
+            if(n===0){
+                return 1
+            }
+            else{
+                return n*factorial(n-1)
+            }
+        }
+        console.log("factorial",factorial(5))
+
+
+        class Atm{
+            constructor(){
+                this.name="Vishal"
+                this.add="UP"
+            }
+            getName(){
+                console.log( this.name)
+            }
+            atmCount(){
+                let pin="1234"
+                let AmountIs=5400
+                function showAmount(){
+                    if(pin==="1234"){
+                        console.log("amount is",AmountIs)
+                    }
+                }
+                showAmount()
+            }
+        }
+        let atm=new Atm()
+        let pin=prompt("Enter the atm pin")
+        atm.atmCount(pin)
+
+
+    // Array.prototype.customAll = function () {
+//     let promiseResolved = 0;
+//     let output = [];
+
+//     return new Promise((resolve, reject) => {
+//         this.forEach((promise) => {
+//             promise
+//                 .then((response) => {
+//                     promiseResolved++;
+//                     output.push(response);
+//                     if (promiseResolved === this.length) {
+//                         resolve(output);
+//                     }
+//                 })
+//                 .catch((error) => {
+//                     // If any promise rejects, immediately reject the customAll promise
+//                     reject(error);
+//                 });
+//         });
+//     });
+// };
+
+// const promise1 = new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve("promise1 done");
+//     }, 2000);
+// });
+
+// const promise2 = new Promise((resolve, reject) => {
+//     setInterval(() => {
+//         resolve("promise2 done");
+//     }, 3000);
+// });
+
+// const arr = [promise1, promise2];
+
+// arr.customAll()
+//     .then((ans) => {
+//         console.log(ans);
+//     })
+//     .catch((error) => {
+//         console.error(error.message);
+//     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
