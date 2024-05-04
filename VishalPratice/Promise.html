@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+          // const cart = ["shoes", "pants", "T-shirt"]
+        //    createOrder (cart, function(orderId){
+        //         proceedToPayment(orderId)
+        //     })
+
+        //  createOrder(cart).then((orderId)=>{proceedToPayment(orderId)})
+        //    .then((paymentInfo)=>{showOrderSummary(paymentInfo)})
+        //    .then((paymentInfo)=>{updateWalletBalance(paymentInfo)})
+
+
+        // const promise = createOrder(cart)
+        // function createOrder(cart) {
+        //     // createOder
+        //     // validateCart
+        //     // orderId
+        //     const pr = new Promise(function (resolve, reject) {
+        //         if (!validateCart(cart)) {
+        //             const err = new Error("cart is not valid")
+        //             reject(err)
+        //         }
+        //         // logic for createOrder
+        //         const orderId = "12345"
+        //         if (orderId) {
+        //             resolve(orderId)
+        //         }
+        //     })
+        //     return pr
+        // }
+        // function validateCart(cart) {
+        //     return true
+        // }
+        // function proceedToPayment(orderId) {
+        //     return new Promise(function (resolve, reject) {
+        //         resolve("Payment successfull")
+        //     })
+        // }
+
+
+        // promise.then(function (orderId) {
+        //     console.log(orderId)
+        //     return orderId
+        // }).then(function (orderId) {
+        //     return proceedToPayment(orderId)
+        // })
+        //     .then(function (paymentInfo) {
+        //         console.log(paymentInfo)
+        //     })
+        //     .catch((err) => { console.log(err) })
+        // console.log(promise)
+
+
+
+
+          // let x1=new Promise((res,rej)=>{
+        //   setTimeout(()=>{
+        //     res("hi I am resolve 1st")
+        //   },1000)
+
+        // })
+        // let x2=new Promise((res,rej)=>{
+        //     setTimeout(()=>{
+        //     res("hi I am resolve 2st")
+        //   },3000)
+        // })
+        // let x3=new Promise((res,rej)=>{
+        //     setTimeout(()=>{
+        //     res("hi I am resolve 3st")
+        //   },4000)
+        // //   rej("hi I am reject 3rd")
+        // })
+
+        // let data=Promise.any([x1,x2,x3]).then((item)=>{
+        //     console.log(item)
+        //     console.log("hjdlfjld")
+        // }).catch((error)=>{
+        //     console.log(error)
+        // })
+
+
+        // function generateNumber(num) {
+        //     return new Promise((res, rej) => {
+        //         setTimeout(() => {
+        //             res(`this is the generated number ${num}`)
+        //         }, 2000)
+        //     })
+        // }
+        // generateNumber(10).then((a) => {
+        //         console.log(a)
+        //         return generateNumber(a * 2)
+        //     })
+        //   .then((b) => {
+        //         console.log(b)
+        //         return generateNumber(b * 3)
+        //     })
+        //     .then((c) => {
+        //         console.log(c)
+        //     }).catch((error) => {
+        //         console.log(error)
+        //     })
+
+
+
+
+    </script>
+</body>
+</html>

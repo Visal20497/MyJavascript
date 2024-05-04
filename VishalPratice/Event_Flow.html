@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Event flow in javascript
+        let gparent = document.getElementsByClassName("gparent")[0]
+        let parent = document.getElementsByClassName("parent")[0]
+        let child = document.getElementsByClassName('child')[0]
+
+        gparent.addEventListener('click', (e) => {
+            // e.stopPropagation()
+            console.log('Grand Parents')
+        }, { capture: true })
+        parent.addEventListener('click', (e) => {
+            // e.stopPropagation()
+            console.log("Parents")
+        }, { capture: true })
+        child.addEventListener('click', (e) => {
+            // e.stopPropagation()
+            console.log("Child")
+        }, { capture: true })
+    </script>
+</body>
+
+</html>

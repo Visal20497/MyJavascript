@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function Method</title>
+</head>
+
+<body>
+    <script>
+        // let obj = {
+        //     name: "Vishal",
+        //     newObj: {
+        //         name: "xyz",
+        //         add: "ABC",
+        //     }
+        // }
+        // function print() {
+        //             console.log(this.name)
+        //         }
+        // let fn=print.bind(obj)
+        // fn()
+
+
+        // for(let x in obj){
+        //     console.log(obj[x])
+        // }
+
+
+
+
+        // let array=new Array(2,3)
+        // console.log(array)
+        // function add(){
+        //     console.log("hello")
+        // }
+        // add()
+        // add.call()
+        // add.apply()
+
+
+
+
+         // function method  -call method
+        // let obj={
+        //     name:"Vishal",
+        //     add:"UP"
+        // }
+        // function demo(){
+        //     console.log(`My name is ${this.name} and my address is ${this.add}`)
+        // }
+        // demo.call(obj)
+
+        // function demo2( age){
+        //     console.log(`MY name is ${this.name} and my address is ${this.add} and my age is ${age}`)
+        // }
+
+        // demo2.call(obj,26)
+
+
+        // function demo(name, age){
+        //     {this.name=name,
+        //     this.age=age}
+        // }
+        // function demo2(name, age, add){
+        //     demo.call(this,name,age)
+        //     this.add=add
+        // }
+        // let x=new demo2("Vishal",24,"UP")
+        // console.log(x)
+
+        // let obj={
+        //     name:"Vishal",
+        //     age:"26",
+        //     print:function(){
+        //         console.log(`my name ${this.name} and age is ${this.age}`)
+        //     }
+        // }
+        // let obj2={
+        //     name:"Maheshwari",
+        //     age:"25"
+        // }
+        // obj.print.call(obj2)
+
+        // function method -apply
+        //    let obj={
+        //     name:"Vishal",
+        //     age:26
+        //    }
+        //    function demo(add){
+        //     console.log(`my name is ${this.name} and my add ${this.age} and ${add} `)
+        //     console.log(this.name,this.age)
+        //    }
+
+        //    demo.apply(obj, ["UP"])
+
+        // function metho-bind
+        //    let obj={
+        //     name:"Vishal",
+        //     age:26
+        //    }
+        //    function demo(add){
+        //     console.log(this.name,this.age)
+        //    }
+        //    let x=demo.bind(obj)
+        //    x()
+
+
+
+    </script>
+</body>
+
+</html>
