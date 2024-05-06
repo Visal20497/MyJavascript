@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debouncing in javascript</title>
+    <style>
+        .table{
+            border-collapse: collapse;
+        }
+        input{
+            margin: auto;
+            width: 20%;
+            height: 30px;
+        }
+        input::placeholder{
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" placeholder="Enter your text..." id="inputText">
+    <h4 id="warn" style="color: red;"></h4>
+    <div id="tableContainer">
+        <table border="1" class="table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+            </tbody>
+        </table>
+    </div>
+    <script>
+        let text = document.getElementById('inputText');
+        let tbody = document.getElementById('tbody');
+        let warning=document.getElementById('warn')
+        let search = '';
+        let globalArr = [];
+        let finddata = []
+
+        async function getdata() {
+            let url = "https://dummyjson.com/products";
+            let data = await fetch(url);
+            let response = await data.json();
+            globalArr = response.products;
+            print(globalArr)
+        }
+        getdata()
+
+        text.addEventListener('input', (e) => {
+            search = e.target.value.trim()
+            let x = setTimeout(() => {
+                if (search) {
+                    datafilter(search)
+                }
+                else {
+                    getdata()
+                    warning.innerText=''
+                }
+            }, 1100)
+            return () => { clearTimeout(x) }
+        });
+
+
+
+        function datafilter(search) {
+            finddata = globalArr.filter((item) => {
+                return item.title.toLowerCase().includes(search.toLocaleLowerCase())
+            })
+            finddata.length===0?warning.innerText="No Data Found *":warning.innerText=''
+            print(finddata)
+        }
+
+        function print(globalArr) {
+            let data = '';
+         globalArr.length>0 &&  globalArr?.map((item) => {
+                let { id, title, description } = item;
+                data += `  <tr>
+                    <td>${id}</td>
+                    <td>${title}</td>
+                    <td>${description}</td>
+                </tr>`;
+            });
+          
+         return   tbody.innerHTML = data;
+        }
+    </script>
+</body>
+
+</html>
